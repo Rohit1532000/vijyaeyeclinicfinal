@@ -1,0 +1,13 @@
+# ads.txt for Vijaya Eye Clinic
+# Reference: https://iabtechlab.com/ads-txt/
+# Updated: 2026-06-02
+
+# Contact: admin@vijayaeyeclinic.com
+
+# Google AdSense (Example - Update with actual publisher ID)
+# google.com, pub-xxxxxxxxxxxxxxxx, DIRECT, f08c47fec0942fa0
+
+# Facebook (if using Facebook Ads Manager)
+# facebook.com, 1234567890, DIRECT, c3e20ecc2f74e27c
+
+# Other ad networks as applicable
