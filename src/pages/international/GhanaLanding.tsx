@@ -65,7 +65,139 @@ const GhanaLanding = () => {
     <>
       <Helmet>
         <title>Top Eye Clinic in Bangalore for Ghanaian Patients | Vijaya Eye Clinic</title>
-        <meta name="description" content="Affordable, top-tier eye surgeries in Bangalore, India for patients from Ghana." />
+        <meta name="description" content="Top Eye Clinic in Bangalore, India for Ghanaian patients offering cataract, LASIK, retina, glaucoma & cornea treatments with expert care at Vijaya Eye Clinic." />
+      <link rel="alternate" hrefLang="en-GH" href="https://vijayaeyeclinic.com/international/ghana/" />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: `{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "MedicalClinic",
+      "@id": "https://vijayaeyeclinic.com/#medicalclinic",
+      "name": "Vijaya Eye Clinic",
+      "url": "https://vijayaeyeclinic.com/",
+      "image": "https://vijayaeyeclinic.com/wp-content/uploads/2024/01/logo.png",
+      "telephone": "+91-80-23356953",
+      "email": "hello@vijayaeyeclinic.com",
+      "priceRange": "$$",
+      "medicalSpecialty": "Ophthalmology",
+      "description": "Vijaya Eye Clinic is a leading eye clinic in Bangalore providing advanced eye care and vision correction services for international patients from Ghana. The clinic specializes in cataract surgery, LASIK, glaucoma treatment, retina care, cornea treatment, pediatric ophthalmology, squint correction, diabetic eye care, and comprehensive eye examinations.",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "#2, P.V. Plaza, 5th Main, 17th Cross, MC Layout, Vijayanagar",
+        "addressLocality": "Bangalore",
+        "addressRegion": "Karnataka",
+        "postalCode": "560040",
+        "addressCountry": "IN"
+      },
+      "areaServed": [
+        {
+          "@type": "Country",
+          "name": "Ghana"
+        },
+        {
+          "@type": "City",
+          "name": "Accra"
+        },
+        {
+          "@type": "City",
+          "name": "Kumasi"
+        },
+        {
+          "@type": "City",
+          "name": "Tamale"
+        }
+      ],
+      "availableService": [
+        {
+          "@type": "MedicalProcedure",
+          "name": "Cataract Surgery"
+        },
+        {
+          "@type": "MedicalProcedure",
+          "name": "LASIK Eye Surgery"
+        },
+        {
+          "@type": "MedicalProcedure",
+          "name": "Glaucoma Treatment"
+        },
+        {
+          "@type": "MedicalProcedure",
+          "name": "Retina Treatment"
+        },
+        {
+          "@type": "MedicalProcedure",
+          "name": "Cornea Treatment"
+        },
+        {
+          "@type": "MedicalProcedure",
+          "name": "Pediatric Eye Care"
+        },
+        {
+          "@type": "MedicalProcedure",
+          "name": "Diabetic Eye Care"
+        },
+        {
+          "@type": "MedicalProcedure",
+          "name": "Squint Eye Treatment"
+        }
+      ],
+      "sameAs": [
+        "https://vijayaeyeclinic.com/"
+      ]
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://vijayaeyeclinic.com/international/ghana#webpage",
+      "url": "https://vijayaeyeclinic.com/international/ghana",
+      "name": "Top Eye Clinic in Bangalore for Ghanaian Patients | Vijaya Eye Clinic",
+      "description": "Vijaya Eye Clinic offers world-class eye care and advanced ophthalmology treatments for patients from Ghana. Get expert consultation, cataract surgery, LASIK, retina, glaucoma, cornea, and pediatric eye care in Bangalore, India.",
+      "inLanguage": "en",
+      "isPartOf": {
+        "@id": "https://vijayaeyeclinic.com/#website"
+      },
+      "about": {
+        "@id": "https://vijayaeyeclinic.com/#medicalclinic"
+      },
+      "primaryImageOfPage": {
+        "@type": "ImageObject",
+        "url": "https://vijayaeyeclinic.com/wp-content/uploads/2024/01/logo.png"
+      },
+      "breadcrumb": {
+        "@id": "https://vijayaeyeclinic.com/international/ghana#breadcrumb"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://vijayaeyeclinic.com/international/ghana#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://vijayaeyeclinic.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "International Patients",
+          "item": "https://vijayaeyeclinic.com/international/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Ghana",
+          "item": "https://vijayaeyeclinic.com/international/ghana"
+        }
+      ]
+    }
+  ]
+}`
+        }}
+      />
+      
       </Helmet>
 
       <Header />

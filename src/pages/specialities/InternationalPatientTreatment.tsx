@@ -3,31 +3,107 @@ import SpecialityContent from "@/components/SpecialityContent";
 import { Helmet } from "react-helmet-async";
 import specialityImg from "@/assets/speciality-international.jpg";
 
+const internationalSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "MedicalOrganization",
+      "name": "Vijaya Eye Clinic - International Patient Care",
+      "alternateName": [
+        "Medical Tourism Eye Hospital Bangalore",
+        "Eye Surgery for International Patients in India",
+        "Best eye hospital in Bangalore for international patients"
+      ],
+      "url": "https://vijayaeyeclinic.com/specialities/international-patient-treatment",
+      "logo": "https://vijayaeyeclinic.com/logo.png",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Vijayanagar",
+        "addressLocality": "Bangalore",
+        "addressRegion": "Karnataka",
+        "addressCountry": "IN"
+      },
+      "description": "World-class eye surgery for international patients in India. Offering advanced LASIK, micro-incision cataract surgery, medical visa assistance, airport transfers, and customized accommodation in Bangalore."
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Why travel to India for eye surgery at Vijaya Eye Clinic Bangalore?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Vijaya Eye Clinic provides affordable eye surgery in India for foreigners with zero waiting lists, cutting-edge surgical technology, English-speaking eye doctors, and total savings of 60% to 75% compared to Western healthcare costs."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you provide medical visa assistance for eye treatment in India?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, our international patient care desk provides official Medical Visa Invitation Letters (V-Visa support), priority booking documentation, and FRRO registration support for smooth travel."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can international patients get LASIK and cataract surgery done in a short visit?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, advanced blade-free LASIK and micro-incision cataract surgery are completed as safe daycare procedures taking only 15 to 20 minutes, allowing overseas patients to complete consultation, surgery, and post-op reviews within 4 to 6 days."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you provide airport pickup and stay assistance for overseas patients?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, we arrange Bangalore International Airport (BLR) transfers, partner hotel/serviced apartment bookings near our clinic, local SIM card access, and dedicated care coordinators."
+          }
+        }
+      ]
+    }
+  ]
+};
+
 const InternationalPatientTreatment = () => (
   <>
     <Helmet>
-      <title>International Patient Services | Vijaya Eye Clinic Bangalore</title>
-      <meta name="description" content="International patient services at Vijaya Eye Clinic. Travel assistance, accommodation, multilingual support, and comprehensive eye care." />
-      <meta name="keywords" content="international patients, medical tourism, travel assistance, eye treatment abroad, global eye care" />
+      <title>Eye Surgery for International Patients India | Vijaya Eye Clinic</title>
+      <meta
+        name="description"
+        content="Affordable eye surgery in India for foreigners at Vijaya Eye Clinic Bangalore. Trusted medical tourism eye hospital offering visa help, LASIK & cataract surgery."
+      />
       <link rel="canonical" href="https://vijayaeyeclinic.com/specialities/international-patient-treatment" />
-      <meta property="og:title" content="International Patient Services | Vijaya Eye Clinic Bangalore" />
-      <meta property="og:description" content="International patient services at Vijaya Eye Clinic. Travel assistance, accommodation, multilingual support." />
+      <meta property="og:title" content="Eye Surgery for International Patients India | Medical Tourism Bangalore" />
+      <meta
+        property="og:description"
+        content="World-class eye care for global travelers: medical visa assistance, blade-free LASIK, cataract surgery, and airport transfers in Bangalore."
+      />
       <meta property="og:url" content="https://vijayaeyeclinic.com/specialities/international-patient-treatment" />
-      <meta name="twitter:title" content="International Patient Services | Vijaya Eye Clinic Bangalore" />
-      <meta name="twitter:description" content="International patient services at Vijaya Eye Clinic. Travel assistance, accommodation, multilingual support." />
+      <meta name="twitter:title" content="International Patient Eye Care Bangalore | Vijaya Eye Clinic" />
+      <meta
+        name="twitter:description"
+        content="Get affordable eye surgery in India for foreigners with English speaking eye doctors and dedicated travel concierge in Bangalore."
+      />
+
+      {/* Structured Medical Organization & FAQ Schema */}
+      <script type="application/ld+json">
+        {JSON.stringify(internationalSchema)}
+      </script>
     </Helmet>
-    <SpecialityLayout title="International Patient Treatment">
+
+    <SpecialityLayout title="Eye Surgery for International Patients in India">
       <SpecialityContent
-        heading="Comprehensive International Patient Treatment Services At Vijaya Eye Clinic"
-        intro="We are dedicated to providing world-class eye care services to patients from around the globe. Our International Patient Treatment services are tailored to meet the unique needs of patients travelling from abroad, ensuring a seamless and comfortable experience throughout their journey to better vision and eye health."
+        heading="Best Eye Hospital in Bangalore for International Patients"
+        intro="Receive world-class ophthalmic care with premier Eye Surgery for International Patients in India at Vijaya Eye Clinic. Recognized as a trusted medical tourism eye hospital Bangalore, we offer international travelers access to world-renowned surgical expertise, zero waiting queues, and high-precision laser treatments at a fraction of global costs."
         image={specialityImg}
-        description="At Vijaya Eye Clinic, we are committed to excellence in eye care, offering a comprehensive range of services to address various eye conditions and concerns. Our team of experienced ophthalmologists, optometrists, and support staff are dedicated to providing personalized and compassionate care to all our patients, regardless of their country of origin."
-        whatIsIt="Vijaya Eye Clinic offers specialized International Patient Treatment services designed to cater to the unique needs of patients travelling from abroad seeking exceptional eye care. Our services ensure a seamless and comfortable experience, providing access to our advanced treatments and facilities regardless of geographic location."
-        whatDoesItInvolve="Our International Patient Treatment involves: Comprehensive consultation and examination to assess the patient's eye health and needs. Customized treatment planning, which may include advanced diagnostic tests, surgical interventions, or specialized therapies. Coordination of travel arrangements, accommodations, translation services, and other logistical support. Ongoing communication and assistance from initial patient contact to ensuring a smooth experience from arrival to departure."
-        suitableFor="Our International Patient Treatment services are suitable for individuals seeking world-class eye care services outside of their home country. It is ideal for patients with complex eye conditions, those seeking specialized treatments not available locally, or individuals who value the expertise and reputation of Vijaya Eye Clinic for their eye care needs."
-        risks="While receiving treatment abroad may involve logistical considerations, such as travel and accommodation arrangements, there are minimal risks associated with the medical care provided at Vijaya Eye Clinic. Our experienced team of ophthalmologists, optometrists, and support staff adhere to the highest standards of safety and quality, ensuring the best possible outcomes for internationally-served patients."
-        costInfo="The cost of International Patient Treatment at Vijaya Eye Clinic can vary depending on several factors, including the specific services required, the complexity of the treatment, and any additional medical procedures or accommodations necessary. To obtain accurate pricing information and explore your options for International Patient Treatment at Vijaya Eye Clinic, we encourage you to schedule an appointment or visit our clinic. Our dedicated team will assess your individual needs, provide personalized treatment recommendations, and assist you every step of the way to ensure a comfortable and successful experience."
-        ctaLine="Reach Out To Our International Patient Treatment Team Today!"
+        description="Backed by over 35 years of clinical trust and thousands of successful procedures, Vijaya Eye Clinic is a premier destination for affordable eye surgery in India for foreigners. Our hospital is staffed by certified, fluent English speaking eye doctors Bangalore India, providing end-to-end medical concierge support from your initial online video evaluation to post-treatment departures."
+        whatIsIt="Our specialized medical tourism program is designed for overseas citizens and NRI patients seeking top-tier clinical solutions unavailable or prohibitively priced in their home countries. We specialize in fast-track LASIK and cataract surgery for overseas patients Bangalore, alongside advanced vitreoretinal repairs, squint correction, and corneal cross-linking using US-FDA approved technologies."
+        whatDoesItInvolve="From your very first enquiry, our team coordinates your medical journey seamlessly: complimentary tele-consultation reviews, expedited medical visa assistance for eye treatment India (V-Visa paperwork), personalized airport pickup and stay assistance for eye care India, and priority daycare surgical scheduling. Most procedures require only a 3 to 7 day stay in Bangalore for complete recovery and flight clearance."
+        suitableFor="This care pathway is ideal for medical travelers from the UK, USA, Middle East, Africa, SAARC countries, and global expats seeking high-quality, cost-effective vision correction, laser refractive surgery, or complex ophthalmic treatments without prolonged NHS or insurance waitlists."
+        risks="All surgical procedures adhere to rigorous sterile modular operation theater protocols and international safety benchmarks. Our dedicated patient desk monitors your healing daily and coordinates virtual tele-follow-ups after you return to your home country to ensure uninterrupted ocular health."
+        costInfo="Eye care in India typically costs 65% to 80% less than equivalent procedures in North America, Europe, or Australia, with identical surgical outcomes and premium FDA-approved implants. Vijaya Eye Clinic provides upfront, all-inclusive transparent package estimates with multiple international payment options and zero hidden costs."
+        ctaLine="Request a Free International Treatment Estimate & Virtual Consultation Today."
       />
     </SpecialityLayout>
   </>

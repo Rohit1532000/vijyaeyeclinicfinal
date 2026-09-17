@@ -3,31 +3,112 @@ import SpecialityContent from "@/components/SpecialityContent";
 import { Helmet } from "react-helmet-async";
 import specialityImg from "@/assets/speciality-retina.jpg";
 
+const retinaSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "MedicalProcedure",
+      "name": "Retina Treatment in Bangalore",
+      "alternateName": [
+        "Best Retina Treatment in Bangalore",
+        "Best retina specialist in Bangalore",
+        "Vitrectomy surgery hospital Bangalore",
+        "Diabetic retinopathy treatment Vijayanagar"
+      ],
+      "procedureType": "SurgicalProcedure",
+      "bodyLocation": "Retina",
+      "description": "Comprehensive retina treatment in Bangalore offering vitrectomy surgery, retinal laser photocoagulation, diabetic retinopathy care in Vijayanagar, and anti-VEGF injections.",
+      "provider": {
+        "@type": "MedicalClinic",
+        "name": "Vijaya Eye Clinic",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Vijayanagar",
+          "addressLocality": "Bangalore",
+          "addressRegion": "Karnataka",
+          "addressCountry": "IN"
+        }
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is the retinal detachment surgery cost Bangalore?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The retinal detachment surgery cost in Bangalore depends on the severity of the detachment, whether vitrectomy, scleral buckle, or gas/silicone oil tamponade is required. Vijaya Eye Clinic provides transparent pricing with cashless Mediclaim and TPA insurance coverage."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Where can I find an Anti-VEGF eye injection clinic Bangalore?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Vijaya Eye Clinic is a specialized anti-VEGF eye injection clinic in Bangalore, administering injections like Lucentis, Accentrix, Eylea, and Avastin under sterile OT conditions for wet AMD and diabetic macular edema."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What does a diabetic eye checkup package Bangalore include?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A diabetic eye checkup package in Bangalore includes dilated fundus examination, optical coherence tomography (OCT), and digital fundus photography to detect microaneurysms and early retinopathy before permanent vision damage occurs."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Where can I get specialized diabetic retinopathy treatment Vijayanagar?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Vijaya Eye Clinic provides comprehensive diabetic retinopathy treatment in Vijayanagar, Bangalore, utilizing advanced green laser photocoagulation and anti-VEGF therapy."
+          }
+        }
+      ]
+    }
+  ]
+};
+
 const RetinaTreatment = () => (
   <>
     <Helmet>
-      <title>Retina Treatment in Bangalore | Diabetic Retinopathy - Vijaya Eye Clinic</title>
-      <meta name="description" content="Advanced retina treatment in Bangalore for diabetic retinopathy, macular degeneration, and retinal detachment repair." />
-      <meta name="keywords" content="retina treatment, diabetic retinopathy, retinal detachment, macular degeneration, vitrectomy surgery" />
+      <title>Retina Treatment in Bangalore | Best Retina Specialist - Vijaya Eye Clinic</title>
+      <meta
+        name="description"
+        content="Looking for the best retina treatment in Bangalore? Consult the best retina specialist in Bangalore for diabetic retinopathy, vitrectomy surgery & anti-VEGF injections."
+      />
       <link rel="canonical" href="https://vijayaeyeclinic.com/specialities/retina-treatment" />
-      <meta property="og:title" content="Retina Treatment in Bangalore | Diabetic Retinopathy - Vijaya Eye Clinic" />
-      <meta property="og:description" content="Advanced retina treatment in Bangalore for diabetic retinopathy and related eye conditions." />
+      <meta property="og:title" content="Retina Treatment in Bangalore | Best Retina Treatment" />
+      <meta
+        property="og:description"
+        content="Advanced vitrectomy surgery hospital, retinal laser photocoagulation, and macular degeneration care at Vijaya Eye Clinic Bangalore."
+      />
       <meta property="og:url" content="https://vijayaeyeclinic.com/specialities/retina-treatment" />
-      <meta name="twitter:title" content="Retina Treatment in Bangalore | Diabetic Retinopathy - Vijaya Eye Clinic" />
-      <meta name="twitter:description" content="Advanced retina treatment in Bangalore for diabetic retinopathy and related eye conditions." />
+      <meta name="twitter:title" content="Retina Treatment in Bangalore | Vijaya Eye Clinic" />
+      <meta
+        name="twitter:description"
+        content="Get advanced diabetic retinopathy treatment in Vijayanagar and vitrectomy surgery in Bangalore."
+      />
+
+      {/* MedicalProcedure and FAQ Schema */}
+      <script type="application/ld+json">
+        {JSON.stringify(retinaSchema)}
+      </script>
     </Helmet>
-    <SpecialityLayout title="Retina Treatment">
+
+    <SpecialityLayout title="Retina Treatment in Bangalore">
       <SpecialityContent
-        heading="Advanced Retina Treatment Services At Vijaya Eye Clinic"
-        intro="Welcome to Vijaya Eye Clinic, your trusted destination for comprehensive and advanced Retina Treatment services. The retina is a vital layer of tissue lining the back of the eye that is essential for vision. Conditions affecting the retina can lead to vision loss or impairment if left untreated. At Vijaya Eye Clinic, our specialized Retina Treatment services aim to diagnose, manage, and treat a wide range of retinal disorders, ensuring optimal eye health and vision for our patients."
+        heading="Best Retina Treatment in Bangalore by Expert Specialists"
+        intro="Preserve your eyesight with advanced Retina Treatment in Bangalore at Vijaya Eye Clinic. Consult the best retina specialist in Bangalore for accurate early detection, dedicated diabetic eye care, and modern microsurgical interventions for complex retinal disorders."
         image={specialityImg}
-        description="At Vijaya Eye Clinic, we understand the impact that retinal conditions can have on a patient's quality of life. Our compassionate team is dedicated to providing individualized care, support, and education to our patients and their families throughout the treatment journey. We take the time to address questions, alleviate concerns, and empower patients with the knowledge and resources needed to make informed decisions about their eye health."
-        whatIsIt="Retina treatment at Vijaya Eye Clinic encompasses specialized care for conditions affecting the retina, the light-sensitive layer at the back of the eye crucial for vision. Our services address a wide range of retinal disorders, including diabetic retinopathy, age-related macular degeneration, retinal detachment, and more. The goal of our treatment is to preserve vision, prevent further deterioration, and improve overall eye health."
-        whatDoesItInvolve="Our Retina treatment involves a thorough evaluation using advanced diagnostic tools to assess the condition of the retina. Diagnostic tests may include digital imaging, optical coherence tomography (OCT), and electroretinography testing. Based on the diagnosis, treatment options may include intravitreal injections, laser therapy, vitrectomy surgery, or retinal detachment repair, tailored to each patient's specific needs."
-        suitableFor="Retina treatment at Vijaya Eye Clinic is suitable for individuals experiencing a variety of retinal conditions that may affect vision or eye health. This includes patients with diabetic eye disease, age-related macular degeneration, retinal vascular disorders, or retinal tears and detachments. Our services are designed to meet the needs of patients of all ages, from children to seniors, who require specialized care for their retinal conditions."
-        risks="While Retina Treatment is generally safe and effective, certain procedures may carry risks. Risks may include infection, bleeding, retinal detachment, or changes in vision. However, our experienced retina specialists take every precaution to minimize risks and maximize outcomes for our patients. We discuss potential risks and benefits with each patient before treatment and provide ongoing support and care throughout the process."
-        costInfo="The cost of Retina Treatment can vary depending on factors such as the specific treatment required, the severity of the condition, and any additional procedures or tests necessary. To obtain accurate pricing information and explore your options for retina treatment at Vijaya Eye Clinic, we encourage you to schedule an appointment or visit our clinic. Our experienced retina specialists specialize in diagnosing and treating various retinal conditions, and will assess your individual needs, conduct a thorough examination, and provide personalized treatment recommendations tailored to your situation."
-        ctaLine="Don't Let Retinal Conditions Affect Your Vision And Quality Of Life."
+        description="Ranked as a premier vitrectomy surgery hospital Bangalore, Vijaya Eye Clinic brings 35+ years of ophthalmic trust to vitreoretinal care. We provide advanced diabetic retinopathy treatment Vijayanagar, pairing high-definition Spectral Domain OCT diagnostics with specialized green retinal laser photocoagulation Bangalore to stop retinal leakage and secure sharp central vision."
+        whatIsIt="Retina treatment covers targeted therapies for vision-threatening conditions affecting the neural tissue at the back of the eye. At our center, we provide evidence-based macular degeneration (AMD) treatment Bangalore as well as emergency procedures for tears and breaks. We also operate as a dedicated anti-VEGF eye injection clinic Bangalore, offering precise intravitreal therapies for macular edema."
+        whatDoesItInvolve="Care starts with high-resolution digital imaging, fundus fluorescein angiography (FFA), and OCT scans. For individuals with diabetes, our dedicated diabetic eye checkup package Bangalore detects sub-clinical damage early. Interventions range from outpatient retinal laser photocoagulation Bangalore to minimally invasive 23G/25G sutureless vitrectomy surgery performed under local anesthesia."
+        suitableFor="This care is crucial for patients with type 1 or type 2 diabetes, sudden onset of dark floaters or light flashes, central vision distortion, or age-related macular changes. Early treatment by an expert retina specialist prevents irreversible photoreceptor damage."
+        risks="Retinal procedures are performed in ultra-sterile laminar air-flow surgical suites. While post-injection pressure fluctuations or mild intraocular inflammation are rare, our specialists provide close monitoring and prophylactic regimens to ensure seamless visual stabilization."
+        costInfo="Retinal detachment surgery cost Bangalore varies based on the condition stage, gas or silicone oil tamponade requirements, and whether combined vitrectomy or buckle repair is needed. Vijaya Eye Clinic maintains upfront, transparent pricing and full support for cashless Mediclaim and major TPA insurance networks."
+        ctaLine="Book an Appointment for the Best Retina Treatment in Bangalore Today."
       />
     </SpecialityLayout>
   </>

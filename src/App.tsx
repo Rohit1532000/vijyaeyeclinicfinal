@@ -17,7 +17,7 @@ import TermsAndConditions from "./pages/TermsAndConditions";
 import RefundAndReturns from "./pages/RefundAndReturns";
 import AppointmentBooking from "./pages/AppointmentBooking";
 import Specialities from "./pages/specialities/Specialities";
-import ComprehensiveOphthalmology from "./pages/specialities/ComprehensiveOphthalmology";
+import ComprehensiveOphthalmology from "./pages/specialities/comprehensive-ophthalmology";
 import CataractTreatment from "./pages/specialities/CataractTreatment";
 import LasikRefractiveTreatment from "./pages/specialities/LasikRefractiveTreatment";
 import GlaucomaTreatment from "./pages/specialities/GlaucomaTreatment";
@@ -56,6 +56,16 @@ import QatarLanding from "./pages/international/QatarLanding";
 import BahrainLanding from "./pages/international/BahrainLanding";
 import YemenLanding from "./pages/international/YemenLanding";
 import IraqLanding from "./pages/international/IraqLanding";
+import MyanmarLanding from "./pages/international/MyanmarLanding";
+import CambodiaLanding from "./pages/international/CambodiaLanding";
+import VietnamLanding from "./pages/international/VietnamLanding";
+import IndonesiaLanding from "./pages/international/IndonesiaLanding";
+import LaosLanding from "./pages/international/LaosLanding";
+import PhilippinesLanding from "./pages/international/PhilippinesLanding";
+import NepalLanding from "./pages/international/NepalLanding";
+import SriLankaLanding from "./pages/international/SriLankaLanding";
+import MaldivesLanding from "./pages/international/MaldivesLanding";
+import BangladeshLanding from "./pages/international/BangladeshLanding";
 
 const queryClient = new QueryClient();
 
@@ -119,6 +129,16 @@ const App = () => (
           <Route path="/international/bahrain" element={<BahrainLanding />} />
           <Route path="/international/yemen" element={<YemenLanding />} />
           <Route path="/international/iraq" element={<IraqLanding />} />
+          <Route path="/international/myanmar" element={<MyanmarLanding />} />
+          <Route path="/international/cambodia" element={<CambodiaLanding />} />
+          <Route path="/international/vietnam" element={<VietnamLanding />} />
+          <Route path="/international/indonesia" element={<IndonesiaLanding />} />
+          <Route path="/international/laos" element={<LaosLanding />} />
+          <Route path="/international/philippines" element={<PhilippinesLanding />} />
+          <Route path="/international/nepal" element={<NepalLanding />} />
+          <Route path="/international/sri-lanka" element={<SriLankaLanding />} />
+          <Route path="/international/maldives" element={<MaldivesLanding />} />
+          <Route path="/international/bangladesh" element={<BangladeshLanding />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

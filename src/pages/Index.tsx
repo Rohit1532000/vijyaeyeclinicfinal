@@ -8,7 +8,6 @@ import DoctorsSection from "@/components/DoctorsSection";
 import GallerySection from "@/components/GallerySection";
 import WhyChooseUs from "@/components/WhyChooseUs";
 import YoutubeVideosSection from "@/components/YoutubeVideosSection";
-import InternationalPatientSection from "@/components/InternationalPatientSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import FAQSection from "@/components/FAQSection";
 import CertificationSection from "@/components/CertificationSection";
@@ -17,6 +16,7 @@ import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
 import FloatingButtons from "@/components/FloatingButtons";
 import { Helmet } from "react-helmet-async";
+import SurgeonTrustSection from "@/components/SurgeonTrustSection";
 
 const Index = () => (
   <>
@@ -28,7 +28,7 @@ const Index = () => (
       />
       <meta
         name="keywords"
-        content="eye clinic bangalore, eye hospital bangalore, cataract surgery, LASIK surgery, retina treatment, glaucoma treatment, ophthalmologist, eye care, vision correction"
+        content="eye clinic in bangalore, eye hospital in bangalore, cataract surgery in bangalore, LASIK surgery in bangalore, retina treatment in bangalore, glaucoma treatment in bangalore, ophthalmologist in bangalore, eye care in bangalore, vision correction in bangalore"
       />
       <link rel="canonical" href="https://vijayaeyeclinic.com/" />
       <meta property="og:title" content="Vijaya Eye Clinic | Super Specialty Eye Hospital Bangalore" />
@@ -53,8 +53,8 @@ const Index = () => (
       <DoctorsSection />
       <GallerySection />
       <WhyChooseUs />
+      <SurgeonTrustSection/>
       <YoutubeVideosSection />
-      <InternationalPatientSection />
       <TestimonialsSection />
       <CertificationSection />
       <BranchesSection />

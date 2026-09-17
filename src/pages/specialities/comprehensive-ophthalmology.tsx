@@ -8,7 +8,7 @@ const ComprehensiveOphthalmology = () => (
     <Helmet>
       <title>Comprehensive Ophthalmology in Bangalore | Full Eye Care - Vijaya Eye Clinic</title>
       <meta name="description" content="Complete ophthalmology services in Bangalore including eye exams, diagnosis, and treatment of all eye conditions." />
-      <meta name="keywords" content="ophthalmology bangalore, comprehensive eye care, eye examination, eye diseases, vision care" />
+      <meta name="keywords" content="ophthalmology in bangalore, comprehensive eye care, eye examination, eye diseases, vision care" />
       <link rel="canonical" href="https://vijayaeyeclinic.com/specialities/comprehensive-ophthalmology" />
       <meta property="og:title" content="Comprehensive Ophthalmology in Bangalore | Full Eye Care - Vijaya Eye Clinic" />
       <meta property="og:description" content="Complete ophthalmology services in Bangalore including eye exams, diagnosis, and treatment." />

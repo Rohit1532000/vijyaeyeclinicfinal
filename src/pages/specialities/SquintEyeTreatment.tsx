@@ -3,31 +3,105 @@ import SpecialityContent from "@/components/SpecialityContent";
 import { Helmet } from "react-helmet-async";
 import specialityImg from "@/assets/speciality-squint.jpg";
 
+const squintSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "MedicalProcedure",
+      "name": "Squint Eye Treatment in Bangalore",
+      "alternateName": [
+        "Best Squint Eye Treatment in Bangalore",
+        "Strabismus surgery Bangalore",
+        "Squint correction specialist Bangalore",
+        "Adult squint surgery in Vijayanagar",
+        "Squint eye surgery cost Bangalore"
+      ],
+      "procedureType": "SurgicalProcedure",
+      "bodyLocation": "Eye Muscles",
+      "description": "Comprehensive squint eye treatment and strabismus surgery in Bangalore for both children and adults. Offering surgical muscle realignment, prism lenses, and vision therapy at Vijaya Eye Clinic.",
+      "provider": {
+        "@type": "MedicalClinic",
+        "name": "Vijaya Eye Clinic",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Vijayanagar",
+          "addressLocality": "Bangalore",
+          "addressRegion": "Karnataka",
+          "addressCountry": "IN"
+        }
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Can squint be corrected in adults without loss of vision?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, adult squint surgery safely straightens misaligned eyes, restores cosmetic appearance, and frequently eliminates double vision without damaging healthy eyesight."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the squint eye surgery cost in Bangalore?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The squint eye surgery cost in Bangalore depends on whether one or both eyes require muscle recession or resection and the type of anesthesia used. Vijaya Eye Clinic provides transparent treatment packages with cashless Mediclaim and TPA support."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is squint eye correction surgery safe for children?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, strabismus surgery is a routine daycare procedure in children performed under general anesthesia to align visual axes and support healthy binocular 3D vision development."
+          }
+        }
+      ]
+    }
+  ]
+};
+
 const SquintEyeTreatment = () => (
   <>
     <Helmet>
-      <title>Squint Eye Treatment in Bangalore - Vijaya Eye Clinic</title>
-      <meta name="description" content="Comprehensive squint eye treatment in Bangalore for children and adults. Correct eye misalignment with expert care." />
-      <meta name="keywords" content="squint treatment, strabismus, eye misalignment, squint surgery, eye alignment correction" />
+      <title>Squint Eye Treatment in Bangalore | Best Strabismus Surgery</title>
+      <meta
+        name="description"
+        content="Get the best squint eye treatment in Bangalore at Vijaya Eye Clinic. Consult top strabismus specialists for adult squint correction & children squint surgery in Vijayanagar."
+      />
       <link rel="canonical" href="https://vijayaeyeclinic.com/specialities/squint-eye-treatment" />
-      <meta property="og:title" content="Squint Eye Treatment in Bangalore - Vijaya Eye Clinic" />
-      <meta property="og:description" content="Comprehensive squint eye treatment in Bangalore for children and adults." />
+      <meta property="og:title" content="Squint Eye Treatment in Bangalore | Best Strabismus Surgery" />
+      <meta
+        property="og:description"
+        content="Advanced squint correction surgery and non-surgical strabismus treatment for kids and adults at Vijaya Eye Clinic Bangalore."
+      />
       <meta property="og:url" content="https://vijayaeyeclinic.com/specialities/squint-eye-treatment" />
-      <meta name="twitter:title" content="Squint Eye Treatment in Bangalore - Vijaya Eye Clinic" />
-      <meta name="twitter:description" content="Comprehensive squint eye treatment in Bangalore for children and adults." />
+      <meta name="twitter:title" content="Squint Eye Treatment in Bangalore | Vijaya Eye Clinic" />
+      <meta
+        name="twitter:description"
+        content="Expert strabismus surgery, prism therapy, and lazy eye correction in Vijayanagar, Bangalore."
+      />
+
+      {/* Structured Medical & FAQ Schema */}
+      <script type="application/ld+json">
+        {JSON.stringify(squintSchema)}
+      </script>
     </Helmet>
-    <SpecialityLayout title="Squint Eye Treatment">
+
+    <SpecialityLayout title="Squint Eye Treatment in Bangalore">
       <SpecialityContent
-        heading="Squint Eye Treatment Services At Vijaya Eye Clinic"
-        intro="We offer comprehensive and advanced treatment options for squint eye conditions. Squint, also known as strabismus, is a condition characterized by misalignment of the eyes, where one eye may turn inwards, outwards, upwards, or downwards relative to the other eye."
+        heading="Best Squint Eye Treatment in Bangalore for Kids & Adults"
+        intro="Regain ocular symmetry and depth perception with specialized Squint Eye Treatment in Bangalore at Vijaya Eye Clinic. Recognized for delivering the best squint eye treatment in Bangalore, our experienced strabismus specialists offer advanced medical and microsurgical solutions to treat crossed eyes, outward drifts, and complex ocular misalignments."
         image={specialityImg}
-        description="At Vijaya Eye Clinic, we understand the impact that squint eye conditions can have on a patient's quality of life and self-esteem. That's why we prioritize compassionate care, patient education, and ongoing support throughout the treatment process. Our team works collaboratively with patients and their families to address any concerns, answer questions, and provide guidance."
-        whatIsIt="Squint eye treatment at Vijaya Eye Clinic addresses the condition known as strabismus, where the eyes are misaligned and may point in different directions. This condition can occur in both children and adults and can lead to visual impairment and social discomfort if not treated. Our specialized treatment aims to correct the misalignment, restore binocular vision, and improve overall eye health."
-        whatDoesItInvolve="Our squint eye treatment involves a thorough evaluation and diagnosis followed by personalized treatment plans tailored to each patient's needs. We begin with a comprehensive assessment of the patient's medical history, visual acuity, and eye alignment. Specialized tests are performed to measure the extent and direction of misalignment, as well as to identify any underlying conditions contributing to the squint."
-        suitableFor="Squint eye treatment at Vijaya Eye Clinic is suitable for individuals of all ages who are experiencing eye misalignment. This includes children with childhood strabismus, as well as adults with acquired or long-standing squint. Our personalized approach ensures that each patient receives tailored treatment based on their specific condition, visual needs, and treatment goals."
-        risks="While squint eye treatment is generally safe and effective, there are some risks associated with certain treatment options. For example, surgical intervention carries risks such as infection, bleeding, or changes in vision. However, these risks are typically minimal compared to the potential benefits of correcting the squint and improving eye alignment."
-        costInfo="The cost of squint eye treatment can vary depending on factors such as the type of treatment recommended, the severity of the squint, and any additional tests or procedures required. To obtain accurate pricing information, we encourage you to schedule an appointment or visit our clinic."
-        ctaLine="Don't Wait Any Longer To Address Your Squint Eye Condition."
+        description="Backed by over 35 years of ophthalmic trust, Vijaya Eye Clinic operates an advanced strabismus surgery clinic equipped with computerized synoptophore technology and prism diagnostic suites. Our surgeons provide dedicated care for pediatric squints and precision adult squint surgery in Vijayanagar to eliminate double vision and restore personal confidence."
+        whatIsIt="Squint (strabismus) occurs when the extraocular muscles fail to work in harmony, causing the visual axes to point in different directions (esotropia, exotropia, or hypertropia). Left untreated, it can lead to amblyopia (lazy eye) in children. We specialize in precision micro-incision strabismus surgery Bangalore, gently repositioning ocular muscles to re-establish perfect ocular alignment."
+        whatDoesItInvolve="Every case begins with comprehensive prism cover testing, cycloplegic retinoscopy, and binocular motility evaluations. Treatment strategies range from corrective optical lenses and orthoptic vision exercises to fine-tuned suture daycare surgery performed under topical or general anesthesia with rapid post-operative recovery."
+        suitableFor="This treatment is vital for children showing misaligned visual focus, parents noticing intermittent eye turning, and adults suffering from long-standing untreated squints, post-trauma ocular deviations, or sudden diplopia (double vision)."
+        risks="Strabismus surgeries boast a very high safety track record with no incisions made into the inner eyeball itself. Procedures are conducted under modular sterile surgical protocols to minimize temporary redness, ensuring smooth tissue healing and zero impact on intrinsic vision."
+        costInfo="Squint eye surgery cost in Bangalore varies based on the number of eye muscles involved, procedural complexity, and diagnostic requirements. Vijaya Eye Clinic maintains transparent, upfront pricing with full cashless Mediclaim and major health insurance TPA coverage."
+        ctaLine="Book a Consultation with Our Squint Correction Specialist in Bangalore Today."
       />
     </SpecialityLayout>
   </>

@@ -8,7 +8,7 @@ const DiabeticEyeCare = () => (
     <Helmet>
       <title>Diabetic Eye Care in Bangalore - Vijaya Eye Clinic</title>
       <meta name="description" content="Specialized diabetic eye care services in Bangalore. Early detection and treatment of diabetic retinopathy and diabetes-related eye conditions." />
-      <meta name="keywords" content="diabetic eye care, diabetic retinopathy, diabetes eye treatment, vision protection, eye screening" />
+      <meta name="keywords" content="diabetic eye care in bangalore, diabetic retinopathy, diabetes eye treatment, vision protection, eye screening" />
       <link rel="canonical" href="https://vijayaeyeclinic.com/specialities/diabetic-eye-care" />
       <meta property="og:title" content="Diabetic Eye Care in Bangalore - Vijaya Eye Clinic" />
       <meta property="og:description" content="Specialized diabetic eye care services in Bangalore. Early detection and treatment of diabetes-related eye conditions." />

@@ -3,31 +3,114 @@ import SpecialityContent from "@/components/SpecialityContent";
 import { Helmet } from "react-helmet-async";
 import specialityImg from "@/assets/speciality-pediatric.jpg";
 
+const pediatricSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "MedicalProcedure",
+      "name": "Pediatric Ophthalmology in Bangalore",
+      "alternateName": [
+        "Best Pediatric Ophthalmology in Bangalore",
+        "Best pediatric ophthalmologist in Bangalore",
+        "Squint eye surgery for children Bangalore",
+        "Amblyopia lazy eye therapy clinic Bangalore",
+        "Adult squint correction surgery Vijayanagar",
+        "Child vision screening center Bangalore"
+      ],
+      "procedureType": "SurgicalProcedure",
+      "bodyLocation": "Eye",
+      "description": "Premier center for Pediatric Ophthalmology in Bangalore offering child vision screening, amblyopia lazy eye therapy, and squint eye surgery for children and adults.",
+      "provider": {
+        "@type": "MedicalClinic",
+        "name": "Vijaya Eye Clinic",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Vijayanagar",
+          "addressLocality": "Bangalore",
+          "addressRegion": "Karnataka",
+          "addressCountry": "IN"
+        }
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Why choose Vijaya Eye Clinic for pediatric ophthalmology in Bangalore?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Vijaya Eye Clinic offers specialized pediatric ophthalmology in Bangalore with child-friendly diagnostics, expert strabismus evaluations, lazy eye therapy, and advanced surgical care."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How is amblyopia (lazy eye) treated in children?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "At our amblyopia lazy eye therapy clinic Bangalore, treatment includes structured occlusion eye patching, penalization drops, and vision stimulation exercises to restore binocular vision."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is squint eye surgery safe for children?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, squint eye surgery for children Bangalore is a safe, daycare procedure performed under gentle pediatric anesthesia to realign ocular muscles and improve 3D depth perception."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is adult squint correction surgery available in Vijayanagar?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, adult squint correction surgery Vijayanagar is safely performed at Vijaya Eye Clinic to correct long-standing ocular misalignment and eliminate double vision."
+          }
+        }
+      ]
+    }
+  ]
+};
+
 const PediatricOphthalTreatment = () => (
   <>
     <Helmet>
-      <title>Pediatric Ophthalmology in Bangalore - Vijaya Eye Clinic</title>
-      <meta name="description" content="Pediatric ophthalmology services in Bangalore for children's eye care. Expert treatment for myopia, lazy eye, and eye misalignment." />
-      <meta name="keywords" content="pediatric ophthalmology, children eye care, lazy eye treatment, myopia control, squint surgery" />
+      <title>Pediatric Ophthalmology in Bangalore | Best Pediatric Eye Care - Vijaya Eye Clinic</title>
+      <meta
+        name="description"
+        content="Get the best pediatric ophthalmology in Bangalore at Vijaya Eye Clinic. Consult the best pediatric ophthalmologist for child vision screening & squint surgery."
+      />
       <link rel="canonical" href="https://vijayaeyeclinic.com/specialities/pediatric-ophthal-treatment" />
-      <meta property="og:title" content="Pediatric Ophthalmology in Bangalore - Vijaya Eye Clinic" />
-      <meta property="og:description" content="Pediatric ophthalmology services in Bangalore for children's eye care and development." />
+      <meta property="og:title" content="Pediatric Ophthalmology in Bangalore | Best Pediatric Eye Care" />
+      <meta
+        property="og:description"
+        content="Advanced pediatric ophthalmology in Bangalore: lazy eye therapy, child vision screening, and squint correction in Vijayanagar."
+      />
       <meta property="og:url" content="https://vijayaeyeclinic.com/specialities/pediatric-ophthal-treatment" />
-      <meta name="twitter:title" content="Pediatric Ophthalmology in Bangalore - Vijaya Eye Clinic" />
-      <meta name="twitter:description" content="Pediatric ophthalmology services in Bangalore for children's eye care and development." />
+      <meta name="twitter:title" content="Pediatric Ophthalmology in Bangalore | Vijaya Eye Clinic" />
+      <meta
+        name="twitter:description"
+        content="Specialized child vision screening center and squint eye surgery for children in Bangalore."
+      />
+
+      {/* Structured Schema Markup */}
+      <script type="application/ld+json">
+        {JSON.stringify(pediatricSchema)}
+      </script>
     </Helmet>
-    <SpecialityLayout title="Pediatric Ophthal Treatment">
+
+    <SpecialityLayout title="Pediatric Ophthalmology in Bangalore">
       <SpecialityContent
-        heading="Pediatric Ophthalmology Treatment At Vijaya Eye Clinic"
-        intro="We provide specialized and compassionate pediatric ophthalmology treatment for children of all ages. Our dedicated team of ophthalmologists and support staff are committed to delivering comprehensive care tailored to meet the unique needs of our young patients, ensuring healthy vision and optimal eye health from infancy through adolescence."
+        heading="Best Pediatric Ophthalmology in Bangalore for Children's Eye Care"
+        intro="Ensure your child develops bright, healthy vision with advanced Pediatric Ophthalmology in Bangalore at Vijaya Eye Clinic. Recognized for delivering the best pediatric ophthalmology in Bangalore, our dedicated team combines friendly care with modern clinical diagnostics to support growing eyes from infancy through adolescence."
         image={specialityImg}
-        description="We understand that visiting the eye doctor can be intimidating for children, which is why we strive to create a warm, welcoming, and child-friendly environment at Vijaya Eye Clinic. Our team of pediatric ophthalmologists and staff members are experienced in working with children and provide gentle, patient-centered care to ensure a positive and comfortable experience for our young patients and their families."
-        whatIsIt="Pediatric ophthalmology treatment at Vijaya Eye Clinic specializes in addressing eye conditions and concerns in children, from infancy to adolescence. Our team of skilled ophthalmologists provides comprehensive care tailored to the unique needs of young patients, ensuring healthy vision and optimal eye health as they grow."
-        whatDoesItInvolve="Pediatric ophthalmology treatment involves a range of services aimed at diagnosing, managing, and treating various eye conditions affecting children. This includes comprehensive eye examinations to assess visual acuity, eye alignment, and overall eye health. Treatment options may include prescribing corrective lenses for refractive errors, managing amblyopia (lazy eye) with patching therapy or atropine drops, correcting strabismus (crossed eyes) through eye muscle surgery or eye exercises, and performing pediatric cataract surgery when necessary."
-        suitableFor="Pediatric ophthalmology treatment at Vijaya Eye Clinic is suitable for children of all ages who may be experiencing eye problems or vision-related issues. This includes children with refractive errors such as nearsightedness or astigmatism, those with amblyopia or strabismus, and those requiring specialized care for congenital or acquired eye conditions. Our compassionate and child-friendly approach ensures that each young patient receives personalized care tailored to their specific needs and circumstances."
-        risks="While pediatric ophthalmology treatment is generally safe and effective, there are potential risks associated with certain procedures or interventions. For example, surgical procedures such as eye muscle surgery or cataract surgery carry risks such as infection, bleeding, or changes in vision. However, our experienced ophthalmologists take necessary precautions to minimize risks and optimize outcomes for young patients. We thoroughly discuss potential risks and benefits with parents or guardians and provide support and guidance throughout the treatment process to ensure the best possible results."
-        costInfo="The cost of pediatric ophthalmology treatment can vary depending on factors such as the specific treatment requested, the complexity of the condition, and any additional procedures or tests necessary. To obtain accurate pricing information and explore your options for pediatric ophthalmology treatment at Vijaya Eye Clinic, we encourage you to schedule an appointment or visit our clinic. Our experienced pediatric ophthalmologists specialize in treating children's eye conditions and will assess your child's individual needs, conduct a thorough examination, and provide personalized treatment recommendations tailored to their situation."
-        ctaLine="Curious About Our Pediatric Ophthalmology Services?"
+        description="Serving as a dedicated child vision screening center Bangalore with over 35 years of clinical trust, Vijaya Eye Clinic provides comprehensive ocular health evaluations in a welcoming atmosphere. Led by the best pediatric ophthalmologist in Bangalore, our clinic also serves as a premier center for adult squint correction surgery Vijayanagar."
+        whatIsIt="Pediatric ophthalmology addresses developmental eye conditions, refractive issues, and binocular alignment in young patients. As a leading amblyopia (lazy eye) therapy clinic Bangalore, we focus on strengthening weak visual pathways early, alongside performing precision squint eye surgery for children Bangalore to restore ocular alignment and binocular depth perception."
+        whatDoesItInvolve="Our protocol begins with gentle cycloplegic retinoscopy, digital eye imaging, and binocular motility evaluations. Care plans range from optical correction for myopia and hyperopia to patching therapy and sutureless micro-incision strabismus surgery performed comfortably as day-care procedures."
+        suitableFor="Specialized pediatric ophthalmology is essential for infants and kids showing signs of crossed eyes, frequent blinking, head tilting, delayed visual tracking, or reading fatigue. Adults suffering from childhood strabismus or acquired misalignment can also achieve proper eye alignment through modern corrective surgery."
+        risks="Pediatric and strabismus procedures carry an exceptional safety track record. Surgeries are performed in sterile, temperature-controlled modular operation theaters under dedicated pediatric anesthesia protocols to ensure minimal discomfort and rapid recovery."
+        costInfo="Care costs vary depending on whether management involves optical vision training, amblyopia patching, or surgical strabismus realignment. Vijaya Eye Clinic offers transparent pricing with cashless Mediclaim and major health insurance TPA support."
+        ctaLine="Consult the Center for the Best Pediatric Ophthalmology in Bangalore Today."
       />
     </SpecialityLayout>
   </>

@@ -7,7 +7,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Helmet } from "react-helmet-async";
 
-const KuwaitLanding = () => {
+const MaldivesLanding = () => {
   const navigate = useNavigate();
   const [copied, setCopied] = useState(false);
 
@@ -18,165 +18,67 @@ const KuwaitLanding = () => {
   };
 
   const advantages = [
-    { icon: TrendingUp, title: "Next-Gen Tech Infrastructure", desc: "Micro-incision surgeries, premium IOLs, blade-free laser suites, advanced diagnostics" },
+    { icon: TrendingUp, title: "Next-Gen Tech Infrastructure", desc: "High-end micro-incision surgeries, premium German/US IOL implants, blade-free laser suites, advanced diagnostics" },
     { icon: Shield, title: "Exceptional Value & Quality", desc: "Premium equipment identical to top US/European clinics at optimized pricing" },
-    { icon: Users, title: "Dedicated Multilingual Liaison", desc: "Arabic-speaking coordinators ensuring smooth and comfortable experience" },
-    { icon: Award, title: "40+ Years Excellence", desc: "Trusted expertise and world-class surgical outcomes" },
+    { icon: Users, title: "Dedicated Help Desk", desc: "Frictionless stay with access to dedicated international coordinators and customized hospitality" },
+    { icon: Award, title: "40+ Years Excellence", desc: "Complex, high-precision eye surgery expertise" },
   ];
 
   const procedures = [
-    { title: "Premium Cataract Surgery", desc: "Advanced IOL options with stitchless micro-incision for quick recovery" },
-    { title: "Diabetic & Retinal Care", desc: "Laser therapy, anti-VEGF injections, and advanced vitrectomy" },
-    { title: "Glaucoma Management", desc: "Precision diagnostics and advanced surgical treatments" },
-    { title: "LASIK & Custom Refractive", desc: "Blade-free technology for high refractive errors" },
+    { title: "Premium Cataract Surgery", desc: "Advanced IOL options with stitchless micro-incision" },
+    { title: "Diabetic & Retinal Care", desc: "Laser therapy, anti-VEGF injections, advanced vitrectomy" },
+    { title: "Glaucoma Management", desc: "Precision diagnostics and treatments" },
+    { title: "LASIK & Custom Refractive", desc: "Blade-free technology for refractive errors" },
   ];
 
   const steps = [
-    { number: "01", title: "Digital Consultation", desc: "Share optical scans via WhatsApp for assessment" },
-    { number: "02", title: "Medical Visa Invitation", desc: "Swift processing through Indian Embassy in Kuwait" },
-    { number: "03", title: "Airport Reception", desc: "Executive transit from Bangalore Airport" },
-    { number: "04", title: "Clinical Treatment", desc: "Advanced care and post-operative documentation" },
+    { number: "01", title: "Digital Consultation", desc: "Share optical scans via WhatsApp/Email" },
+    { number: "02", title: "Medical Visa Invitation", desc: "Swift processing through Indian High Commission in Malé" },
+    { number: "03", title: "Airport Reception", desc: "Executive transit to accommodation or facility" },
+    { number: "04", title: "Treatment & Follow-up", desc: "Advanced care with discharge documentation" },
   ];
 
   const faqs = [
     {
-      q: "How long should I plan to stay?",
-      a: "Most procedures require 5-7 days including initial recovery. Complex surgeries may need 10-14 days."
+      q: "How do I apply for an Indian Medical Visa from Malé?",
+      a: "Our international desk issues an official Medical Visa Invitation Letter for priority processing at the Indian High Commission in Malé."
     },
     {
-      q: "Can you arrange flights from Kuwait City?",
-      a: "Yes, our team coordinates direct flights from Kuwait International Airport to Bangalore."
+      q: "Can I get a preliminary diagnosis and pricing matrix before traveling?",
+      a: "Yes, absolutely. Share your ophthalmic prescriptions or diagnostic checkups via WhatsApp or Email for transparent cost estimate."
     },
     {
-      q: "What payment options are available?",
-      a: "We accept multiple currencies with transparent pricing in USD/INR."
+      q: "What technology do you use for advanced vision correction?",
+      a: "State-of-the-art customized blade-free laser systems and premium Implantable Collamer Lens (ICL) technology for high refractive errors."
     },
     {
-      q: "Is accommodation provided?",
-      a: "We arrange premium serviced apartments with kitchens near our facilities."
+      q: "Are there local lodging options with private cooking setups?",
+      a: "Yes. We assist in booking premium serviced apartments near Vijayanagar and Nagadevanahalli with private kitchens."
     },
     {
-      q: "What post-operative support is available?",
-      a: "Full monitoring through virtual consultations and WhatsApp support."
+      q: "How long after undergoing advanced cataract surgery can I fly back to the Maldives?",
+      a: "Our stitchless, micro-incision phacoemulsification allows fast healing. Fit-to-fly certificate within 4-5 days."
+    },
+    {
+      q: "What follow-up infrastructure is available once I return home?",
+      a: "Regular digital tele-health consults via Zoom or WhatsApp keeping you connected with your operating surgeon."
     },
   ];
 
   return (
     <>
       <Helmet>
-        <title>Best Eye Hospital in Bangalore, India for Kuwaiti Patients | Vijaya Eye Clinic</title>
-        <meta name="description" content="Looking for the best eye hospital in Bangalore India for Kuwaiti patients? Choose Vijaya Eye Clinic for expert ophthalmologists, modern technology and trusted eye care." />
-        <meta name="keywords" content="best eye hospital in bangalore for kuwaiti patients, advanced eye surgery in india from kuwait city, cataract surgery bangalore vijaya eye clinic, premium lasik cost india kuwait" />
-      <link rel="alternate" hrefLang="en-kw" href="https://vijayaeyeclinic.com/international/kuwait/" />
-      <link rel="alternate" hrefLang="en-in" href="https://vijayaeyeclinic.com/" />
-      <link rel="alternate" hrefLang="x-default" href="https://vijayaeyeclinic.com/international/kuwait/" />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: `{
-  "@context": "https://schema.org",
-  "@type": "Hospital",
-  "@id": "https://vijayaeyeclinic.com/international/kuwait#hospital",
-  "name": "Vijaya Eye Clinic Super Specialty Eye Hospital",
-  "url": "https://vijayaeyeclinic.com/international/kuwait",
-  "mainEntityOfPage": {
-    "@type": "WebPage",
-    "@id": "https://vijayaeyeclinic.com/international/kuwait"
-  },
-  "headline": "Best Eye Hospital in Bangalore for Kuwaiti Patients | Vijaya Eye Clinic",
-  "description": "Vijaya Eye Clinic is a leading eye hospital in Bangalore offering advanced ophthalmology treatments for patients from Kuwait, including cataract surgery, LASIK, retina care, glaucoma treatment, cornea care, pediatric ophthalmology and comprehensive eye examinations.",
-  "image": "https://vijayaeyeclinic.com/wp-content/uploads/2024/07/logo.png",
-  "telephone": "+91-80-23356953",
-  "email": "hello@vijayaeyeclinic.com",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "No. 2, P V Plaza, 5th Main Road, 17th Cross, MC Layout, Vijayanagar",
-    "addressLocality": "Bengaluru",
-    "addressRegion": "Karnataka",
-    "postalCode": "560040",
-    "addressCountry": "IN"
-  },
-  "areaServed": [
-    {
-      "@type": "Country",
-      "name": "Kuwait"
-    }
-  ],
-  "medicalSpecialty": [
-    "Ophthalmology",
-    "Cataract Surgery",
-    "LASIK",
-    "Retina",
-    "Glaucoma",
-    "Cornea",
-    "Pediatric Ophthalmology",
-    "Oculoplasty",
-    "Vitrectomy",
-    "Comprehensive Ophthalmology"
-  ],
-  "availableService": [
-    {
-      "@type": "MedicalProcedure",
-      "name": "Cataract Surgery"
-    },
-    {
-      "@type": "MedicalProcedure",
-      "name": "LASIK Eye Surgery"
-    },
-    {
-      "@type": "MedicalTherapy",
-      "name": "Retina Treatment"
-    },
-    {
-      "@type": "MedicalTherapy",
-      "name": "Glaucoma Treatment"
-    },
-    {
-      "@type": "MedicalTherapy",
-      "name": "Cornea Treatment"
-    },
-    {
-      "@type": "MedicalTherapy",
-      "name": "Pediatric Eye Care"
-    },
-    {
-      "@type": "MedicalTherapy",
-      "name": "Diabetic Eye Care"
-    }
-  ],
-  "sameAs": [
-    "https://www.facebook.com/vijayaeyeclinic",
-    "https://www.instagram.com/vijayaeyeclinic"
-  ],
-  "potentialAction": {
-    "@type": "ReserveAction",
-    "target": {
-      "@type": "EntryPoint",
-      "urlTemplate": "https://vijayaeyeclinic.com/contact-us/"
-    },
-    "result": {
-      "@type": "Reservation",
-      "name": "Book an Appointment"
-    }
-  },
-  "inLanguage": "en",
-  "keywords": [
-    "Best Eye Hospital in Bangalore for Kuwaiti Patients",
-    "Eye Hospital in Bangalore",
-    "Eye Treatment for Kuwait Patients",
-    "Cataract Surgery in Bangalore",
-    "LASIK Surgery Bangalore",
-    "Retina Specialist Bangalore",
-    "Glaucoma Treatment Bangalore",
-    "Medical Tourism India",
-    "International Eye Care"
-  ]
-}` }} />
+        <title>Best Eye Hospital in Bangalore for Maldivian Patients | Vijaya Eye Clinic</title>
+        <meta name="description" content="Premium, high-precision eye care in Bangalore, India for patients from the Maldives. Specialized Cataract, LASIK, and Retinal services at Vijaya Eye Clinic. Get an immediate medical visa invite." />
+        <meta name="keywords" content="best eye hospital in bangalore for maldivian patients, advanced eye surgery in india from male, cataract surgery bangalore vijaya eye clinic, premium lasik cost india maldives" />
       </Helmet>
 
       <Header />
       <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
         <section className="relative min-h-[600px] flex items-center justify-center bg-gradient-to-r from-slate-900 via-blue-900 to-slate-900 text-white px-4 py-20">
           <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">Premium Eye Care for Patients from Kuwait</h1>
-            <p className="text-lg md:text-xl text-blue-100 mb-8">From Kuwait City, Al Ahmadi, Hawalli seeking advanced vision restoration.</p>
+            <h1 className="text-4xl md:text-5xl font-bold mb-6">Advanced, Premium Eye Care for Patients from the Maldives</h1>
+            <p className="text-lg md:text-xl text-blue-100 mb-8">From Malé, Addu City, Fuvahmulah seeking elite-level vision restoration</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button onClick={() => navigate('/contact-us')} size="lg" className="bg-blue-500 hover:bg-blue-600 text-white px-8">Get Free Medical Consultation</Button>
               <Button onClick={() => window.location.href = "tel:08026721818"} size="lg" variant="outline" className="text-black border-black hover:bg-black hover:text-white px-8"><Phone className="w-4 h-4 mr-2" />Call Our Team</Button>
@@ -186,13 +88,14 @@ const KuwaitLanding = () => {
 
         <section className="py-16 px-4 bg-white">
           <div className="max-w-4xl mx-auto">
-            <p className="text-lg text-gray-700">Our facilities in <strong>Vijayanagar</strong> and <strong>Nagadevanahalli</strong> offer world-class eye care with specialized support for Kuwaiti patients.</p>
+            <p className="text-lg text-gray-700 mb-4">Every year, many families from Malé, Addu City, Fuvahmulah, and across the Maldives choose Bangalore for definitive, elite-level vision restoration.</p>
+            <p className="text-lg text-gray-700">At <strong>Vijaya Eye Clinic</strong>, we bring over 40 years of trusted clinical excellence across two state-of-the-art super-specialty facilities in Bangalore: our central flagship hub in <strong>Vijayanagar</strong> and our ultra-modern center in <strong>Nagadevanahalli</strong>.</p>
           </div>
         </section>
 
         <section className="py-16 px-4">
           <div className="max-w-6xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-12 text-center">Why Kuwaiti Patients Choose Vijaya Eye Clinic</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-12 text-center">Why Patients from the Maldives Choose Vijaya Eye Clinic, Bangalore</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {advantages.map((adv, idx) => (
                 <motion.div key={idx} initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} className="bg-white p-8 rounded-lg shadow-md">
@@ -207,7 +110,7 @@ const KuwaitLanding = () => {
 
         <section className="py-16 px-4 bg-gradient-to-r from-slate-50 to-blue-50">
           <div className="max-w-6xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-12 text-center">Specialized Treatments</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-12 text-center">Specialized Eye Treatments</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {procedures.map((proc, idx) => (
                 <div key={idx} className="bg-white p-8 rounded-lg shadow-md border-l-4 border-blue-500">
@@ -221,7 +124,7 @@ const KuwaitLanding = () => {
 
         <section className="py-16 px-4 bg-white">
           <div className="max-w-6xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-12 text-center">Your Journey from Kuwait</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-12 text-center">Your Journey from the Maldives to Vijaya Eye Clinic</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {steps.map((step, idx) => (
                 <div key={idx} className="bg-gradient-to-br from-slate-50 to-blue-50 p-8 rounded-lg shadow-md relative">
@@ -238,8 +141,8 @@ const KuwaitLanding = () => {
           <div className="max-w-6xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-12 text-center">Our Bangalore Centers</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              <div className="bg-white p-8 rounded-lg shadow-md"><MapPin className="w-8 h-8 text-blue-600 mb-4" /><h3 className="text-2xl font-bold text-gray-900 mb-4">Vijayanagar</h3><p className="text-gray-700">Flagship super-specialty center.</p></div>
-              <div className="bg-white p-8 rounded-lg shadow-md"><MapPin className="w-8 h-8 text-blue-600 mb-4" /><h3 className="text-2xl font-bold text-gray-900 mb-4">Nagadevanahalli</h3><p className="text-gray-700">Ultra-modern facility for comprehensive care.</p></div>
+              <div className="bg-white p-8 rounded-lg shadow-md"><MapPin className="w-8 h-8 text-blue-600 mb-4" /><h3 className="text-2xl font-bold text-gray-900 mb-4">Vijayanagar</h3><p className="text-gray-700">Central flagship hub.</p></div>
+              <div className="bg-white p-8 rounded-lg shadow-md"><MapPin className="w-8 h-8 text-blue-600 mb-4" /><h3 className="text-2xl font-bold text-gray-900 mb-4">Nagadevanahalli</h3><p className="text-gray-700">Ultra-modern center.</p></div>
             </div>
           </div>
         </section>
@@ -266,7 +169,7 @@ const KuwaitLanding = () => {
         <section className="py-20 px-4 bg-gradient-to-r from-slate-900 via-blue-900 to-slate-900 text-white">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold mb-6">Ready for Premium Eye Care?</h2>
-            <p className="text-lg text-blue-100 mb-8">Join Kuwaiti patients for world-class vision restoration.</p>
+            <p className="text-lg text-blue-100 mb-8">Join Maldivian patients for world-class vision restoration.</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
               <Button onClick={() => navigate('/contact-us')} size="lg" className="bg-blue-500 hover:bg-blue-600 text-white px-8">Get Free Medical Consultation</Button>
               <Button onClick={() => navigate('/appointment-booking')} size="lg" className="bg-blue-600 hover:bg-blue-700 text-white px-8">Start Your Journey</Button>
@@ -287,4 +190,4 @@ const KuwaitLanding = () => {
   );
 };
 
-export default KuwaitLanding;
+export default MaldivesLanding;

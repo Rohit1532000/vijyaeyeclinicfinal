@@ -3,31 +3,104 @@ import SpecialityContent from "@/components/SpecialityContent";
 import { Helmet } from "react-helmet-async";
 import specialityImg from "@/assets/speciality-optometry.jpg";
 
+const optometrySchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "MedicalProcedure",
+      "name": "Optometry Services in Bangalore",
+      "alternateName": [
+        "Best Optometry Clinic in Bangalore",
+        "Comprehensive eye examination Bangalore",
+        "Contact lens fitting clinic Vijayanagar",
+        "Computerized eye testing clinic Bangalore"
+      ],
+      "procedureType": "DiagnosticProcedure",
+      "bodyLocation": "Eye",
+      "description": "Comprehensive optometry services in Bangalore at Vijaya Eye Clinic. Offering computerized digital eye testing, toric and RGP contact lens fitting, pediatric vision screening, and refractive evaluations.",
+      "provider": {
+        "@type": "MedicalClinic",
+        "name": "Vijaya Eye Clinic",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Vijayanagar",
+          "addressLocality": "Bangalore",
+          "addressRegion": "Karnataka",
+          "addressCountry": "IN"
+        }
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is included in a comprehensive eye examination in Bangalore?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A comprehensive eye examination at Vijaya Eye Clinic includes digital autorefraction, slit-lamp bio-microscopy, intraocular pressure measurement, subjective refraction, and dilated fundus evaluation to assess both vision clarity and overall ocular health."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Where can I get customized contact lens fitting in Vijayanagar?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Vijaya Eye Clinic provides specialized contact lens fitting in Vijayanagar, Bangalore, offering soft disposable, monthly toric, rigid gas permeable (RGP), and scleral lenses tailored to your corneal curvature."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How often should adults and children undergo vision testing?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "School-going children and adults with screen-intensive lifestyles should undergo routine digital eye testing every 6 to 12 months to detect refractive shifts, dry eye disease, and binocular vision fatigue early."
+          }
+        }
+      ]
+    }
+  ]
+};
+
 const Optometry = () => (
   <>
     <Helmet>
-      <title>Optometry Services in Bangalore - Vijaya Eye Clinic</title>
-      <meta name="description" content="Comprehensive optometry services in Bangalore including eye exams, contact lens fitting, and vision correction." />
-      <meta name="keywords" content="optometry, eye examination, contact lenses, glasses fitting, vision screening, eye health" />
+      <title>Optometry Services in Bangalore | Best Optometry Clinic - Vijaya Eye Clinic</title>
+      <meta
+        name="description"
+        content="Looking for the best optometry services in Bangalore? Vijaya Eye Clinic offers advanced computerized eye testing, expert contact lens fitting & comprehensive exams."
+      />
       <link rel="canonical" href="https://vijayaeyeclinic.com/specialities/optometry" />
-      <meta property="og:title" content="Optometry Services in Bangalore - Vijaya Eye Clinic" />
-      <meta property="og:description" content="Comprehensive optometry services in Bangalore including eye exams and vision correction." />
+      <meta property="og:title" content="Optometry Services in Bangalore | Best Optometry Clinic" />
+      <meta
+        property="og:description"
+        content="Advanced computerized digital eye testing, custom contact lens fitting, and comprehensive ocular exams in Bangalore."
+      />
       <meta property="og:url" content="https://vijayaeyeclinic.com/specialities/optometry" />
-      <meta name="twitter:title" content="Optometry Services in Bangalore - Vijaya Eye Clinic" />
-      <meta name="twitter:description" content="Comprehensive optometry services in Bangalore including eye exams and vision correction." />
+      <meta name="twitter:title" content="Optometry Services in Bangalore | Vijaya Eye Clinic" />
+      <meta
+        name="twitter:description"
+        content="Professional eye examinations, prescription glasses fitting, and contact lens consultations in Vijayanagar, Bangalore."
+      />
+
+      {/* Structured Medical & FAQ Schema */}
+      <script type="application/ld+json">
+        {JSON.stringify(optometrySchema)}
+      </script>
     </Helmet>
-    <SpecialityLayout title="Optometry">
+
+    <SpecialityLayout title="Optometry Services in Bangalore">
       <SpecialityContent
-        heading="Comprehensive Optometry Services At Vijaya Eye Clinic"
-        intro="Welcome to Vijaya Eye Clinic, your premier destination for comprehensive Optometry services aimed at preserving and enhancing your vision and eye health. Our team of skilled optometrists is dedicated to providing personalized care, state-of-the-art diagnostics, and a wide range of services to meet all your vision needs."
+        heading="Best Optometry Services in Bangalore for Complete Vision Health"
+        intro="Experience precise diagnostic clarity and compassionate vision care with comprehensive Optometry Services in Bangalore at Vijaya Eye Clinic. Recognized as a leading optometry clinic in Bangalore, our certified optometrists combine cutting-edge computerized diagnostic instrumentation with custom optical solutions to protect your lifelong eyesight."
         image={specialityImg}
-        description="At Vijaya Eye Clinic, we believe that regular eye examinations are essential for maintaining optimal vision and detecting potential eye problems early. Our experienced optometrists perform thorough eye examinations using advanced diagnostic tools and techniques to assess your visual acuity, eye health, and overall eye function. Whether you need a routine check-up or have specific concerns about your vision, our team is here to help."
-        whatIsIt="Optometry services at Vijaya Eye Clinic encompass a range of comprehensive eye care solutions aimed at maintaining and improving your vision and overall eye health. Our team of skilled optometrists specializes in diagnosing and managing various eye conditions, performing thorough eye examinations, and providing personalized treatment options tailored to your unique needs."
-        whatDoesItInvolve="Our Optometry services involve: Conducting comprehensive eye examinations to assess visual acuity, eye health, and overall eye function. Providing personalized fittings for glasses and contact lenses to optimize visual performance and comfort. Offering specialized treatments for conditions such as dry eye syndrome, computer vision syndrome, and pediatric eye conditions. Collaborating closely with our team of ophthalmologists to ensure coordinated care and comprehensive treatment plans."
-        suitableFor="Optometry services at Vijaya Eye Clinic are suitable for individuals of all ages who seek to maintain or improve their vision and eye health. Whether you require a routine eye examination, need assistance with glasses or contact lenses, or have specific concerns about your eye health, our skilled optometrists are here to help. We specialize in providing pediatric eye care, ensuring that children receive the attention and support they need to develop healthy vision."
-        risks="While Optometry services are generally safe, there may be minimal risks associated with certain procedures or treatments. Risks may include discomfort with contact lenses, allergic reactions to certain eye drops, or rare complications related to diagnostic procedures. However, our experienced optometrists take every precaution to minimize risks and ensure patient safety throughout the examination and treatment process."
-        costInfo="The cost of Optometry services can vary depending on factors such as the specific services required, the complexity of the examination, and any additional tests or procedures necessary. To obtain accurate pricing information and explore your options for optometry services at Vijaya Eye Clinic, we encourage you to schedule an appointment or visit our clinic. Our experienced optometrists specialize in providing comprehensive eye examinations, fitting contact lenses, and managing various eye conditions. They will assess your individual needs, conduct a thorough examination, and provide personalized recommendations tailored to your situation."
-        ctaLine="Browse Our Wide Selection Of Glasses Frames And Contact Lenses."
+        description="Backed by over 35 years of clinical trust, Vijaya Eye Clinic operates an advanced computerized eye testing clinic in Bangalore. Our team conducts in-depth assessments of ocular motility, binocular alignment, and internal eye structures, providing an accurate bridge between preventive optometric care and tertiary ophthalmic treatments."
+        whatIsIt="Optometry is the frontline of primary vision care, focusing on the diagnosis, optical management, and prevention of visual system disorders. Our services range from precision prescription dispensing to managing digital asthenopia and serving as a dedicated contact lens fitting clinic Vijayanagar for soft, toric, and specialized gas-permeable lenses."
+        whatDoesItInvolve="Every consultation involves a multi-tier assessment: computerized autorefraction, corneal curvature mapping, non-contact tonometry to monitor intraocular pressure, and slit-lamp biomicroscopy. For digital screen users, we perform specialized tear film breakup time (TBUT) tests and prescribe high-definition blue-defense lenses tailored to workstation distances."
+        suitableFor="Our optometry care is tailored for individuals experiencing blurry vision, frequent headaches, double vision, night driving glare, or contact lens discomfort. Routine screening is vital for students, software engineers, and adults monitoring gradual age-related focusing shifts (presbyopia)."
+        risks="Optometric evaluations and diagnostic dilations are non-invasive and safe. Temporary mild blurriness or light sensitivity caused by pupil-dilating eye drops resolves naturally within a few hours. Strict clinical hygiene and lens sterilization guidelines guarantee comfortable contact lens trials without infection."
+        costInfo="Diagnostic and evaluation pricing depends on whether you need a routine automated visual screening, specialized contact lens trial and fitting, or a full dilated diabetic vision workup. Vijaya Eye Clinic offers transparent, affordable packages with immediate prescription reports."
+        ctaLine="Schedule Your Comprehensive Eye Exam at Vijaya Eye Clinic Today."
       />
     </SpecialityLayout>
   </>

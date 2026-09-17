@@ -7,10 +7,9 @@ import VisionMissionCards from "@/components/VisionMissionCards";
 import WhyChooseUs from "@/components/WhyChooseUs";
 import FAQSection from "@/components/FAQSection";
 import { motion } from "framer-motion";
-import { CheckCircle, Star, Heart, Lightbulb, Eye as EyeIcon, Users, ArrowUpRight } from "lucide-react";
+import { CheckCircle, Star, Heart, Lightbulb, Eye as EyeIcon, Users } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Helmet } from "react-helmet-async";
-import hero3 from "@/assets/hero-3.jpg";
 
 const highlights = [
   "Excellence",
@@ -61,15 +60,23 @@ const CoreValues = () => (
       <section className="section-padding">
         <div className="container mx-auto">
           <div className="grid md:grid-cols-2 gap-12 items-center">
+            
+            {/* Updated YouTube Video Section */}
             <motion.div
-              className="relative"
+              className="relative w-full"
               initial={{ opacity: 0, x: -40 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.7 }}
             >
-              <div className="rounded-2xl overflow-hidden shadow-xl group">
-                <img src={hero3} alt="Core Values" className="w-full h-[400px] object-cover group-hover:scale-105 transition-transform duration-500" />
+              <div className="rounded-2xl overflow-hidden shadow-xl aspect-video w-full bg-black">
+                <iframe
+                  className="w-full h-full"
+                  src="https://www.youtube.com/embed/rBtUWAA-gD0"
+                  title="Our Core Values & Quality Video"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowFullScreen
+                ></iframe>
               </div>
             </motion.div>
 

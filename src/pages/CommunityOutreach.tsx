@@ -10,7 +10,7 @@ import { Button } from "@/components/ui/button";
 import { Phone, Eye, Users, BookOpen, HeartHandshake } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import hero3 from "@/assets/hero-3.jpg";
-import gallery1 from "@/assets/gallery-1.png";
+
 
 const initiatives = [
   { title: "Our Initiatives", desc: "Vijaya Eye Clinic runs community outreach programs and initiatives across various communities, providing free and subsidized eye care services to vulnerable and underserved populations.", icon: HeartHandshake },

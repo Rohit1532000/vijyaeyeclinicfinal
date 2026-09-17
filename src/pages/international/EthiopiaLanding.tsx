@@ -66,6 +66,135 @@ const EthiopiaLanding = () => {
       <Helmet>
         <title>Advanced Eye Surgery in Bangalore for Ethiopian Patients</title>
         <meta name="description" content="Affordable, high-success eye care in Bangalore, India for patients from Ethiopia." />
+      <link rel="alternate" hrefLang="en-et" href="https://vijayaeyeclinic.com/international/ethiopia" />
+<link rel="alternate" hrefLang="en" href="https://vijayaeyeclinic.com/international/ethiopia" />
+<link rel="alternate" hrefLang="x-default" href="https://vijayaeyeclinic.com/international/ethiopia" />
+      <script type="application/ld+json">
+{`{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "MedicalClinic",
+      "@id": "https://vijayaeyeclinic.com/#medicalclinic",
+      "name": "Vijaya Eye Clinic Super Speciality Eye Hospital",
+      "url": "https://vijayaeyeclinic.com/",
+      "logo": "https://vijayaeyeclinic.com/wp-content/uploads/logo.png",
+      "image": "https://vijayaeyeclinic.com/wp-content/uploads/2024/05/vijaya-eye-clinic.jpg",
+      "description": "Vijaya Eye Clinic Super Speciality Eye Hospital offers advanced eye surgery in Bangalore for Ethiopian patients, including cataract surgery, LASIK, retina treatment, cornea treatment, glaucoma treatment, pediatric ophthalmology, and comprehensive eye care with dedicated international patient services.",
+      "telephone": "+91-80-23356953",
+      "email": "hello@vijayaeyeclinic.com",
+      "medicalSpecialty": [
+        "Ophthalmology"
+      ],
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "PV Plaza, #2, 5th Main Road, MC Layout, Opp. Sarvajna Bus Stop, Govindarajanagar",
+        "addressLocality": "Bengaluru",
+        "addressRegion": "Karnataka",
+        "postalCode": "560040",
+        "addressCountry": "IN"
+      },
+      "areaServed": [
+        {
+          "@type": "Country",
+          "name": "Ethiopia"
+        },
+        {
+          "@type": "Country",
+          "name": "India"
+        }
+      ],
+      "availableService": [
+        {
+          "@type": "MedicalProcedure",
+          "name": "Advanced Cataract Surgery"
+        },
+        {
+          "@type": "MedicalProcedure",
+          "name": "LASIK & Refractive Surgery"
+        },
+        {
+          "@type": "MedicalProcedure",
+          "name": "Retina Surgery"
+        },
+        {
+          "@type": "MedicalProcedure",
+          "name": "Cornea Treatment"
+        },
+        {
+          "@type": "MedicalProcedure",
+          "name": "Glaucoma Treatment"
+        },
+        {
+          "@type": "MedicalProcedure",
+          "name": "Vitrectomy Surgery"
+        },
+        {
+          "@type": "MedicalProcedure",
+          "name": "Pediatric Eye Care"
+        }
+      ]
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://vijayaeyeclinic.com/international/ethiopia/#webpage",
+      "url": "https://vijayaeyeclinic.com/international/ethiopia",
+      "name": "Advanced Eye Surgery in Bangalore for Ethiopian Patients | Vijaya Eye Clinic",
+      "headline": "Advanced Eye Surgery in Bangalore for Ethiopian Patients",
+      "description": "Travel from Ethiopia to Vijaya Eye Clinic in Bangalore for advanced eye surgery, cataract treatment, LASIK, retina care, cornea treatment, glaucoma management, and comprehensive ophthalmology with international patient support.",
+      "inLanguage": "en",
+      "isPartOf": {
+        "@id": "https://vijayaeyeclinic.com/#website"
+      },
+      "about": {
+        "@id": "https://vijayaeyeclinic.com/#medicalclinic"
+      },
+      "primaryImageOfPage": {
+        "@type": "ImageObject",
+        "url": "https://vijayaeyeclinic.com/wp-content/uploads/2024/05/vijaya-eye-clinic.jpg"
+      },
+      "mainEntity": {
+        "@id": "https://vijayaeyeclinic.com/#medicalclinic"
+      },
+      "keywords": [
+        "Advanced Eye Surgery in Bangalore for Ethiopian Patients",
+        "Eye Hospital in Bangalore for Ethiopian Patients",
+        "Cataract Surgery in India",
+        "LASIK Surgery Bangalore",
+        "Retina Specialist Bangalore",
+        "Cornea Treatment India",
+        "International Eye Care",
+        "Medical Tourism India",
+        "Eye Treatment for Ethiopian Patients"
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://vijayaeyeclinic.com/international/ethiopia/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://vijayaeyeclinic.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "International Patients",
+          "item": "https://vijayaeyeclinic.com/international/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Ethiopia",
+          "item": "https://vijayaeyeclinic.com/international/ethiopia"
+        }
+      ]
+    }
+  ]
+}
+      `}</script>
       </Helmet>
 
       <Header />
@@ -159,7 +288,6 @@ const EthiopiaLanding = () => {
             </div>
           </div>
         </section>
-       
 
         <section className="py-20 px-4 bg-white">
           <div className="container mx-auto max-w-3xl">

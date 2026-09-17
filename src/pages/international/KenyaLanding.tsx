@@ -127,7 +127,7 @@ const KenyaLanding = () => {
         <meta property="og:type" content="website" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Top Eye Hospital in Bangalore for Kenyan Patients | Vijaya Eye Clinic" />
-        <meta name="twitter:description" content="Affordable, world-class eye surgery in Bangalore, India for patients from Kenya." />
+        <meta name="twitter:description" content="Affordable, world class eye surgery in Bangalore, India for patients from Kenya." />
         <script type="application/ld+json">
           {`{
             "@context": "https://schema.org",

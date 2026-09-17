@@ -27,13 +27,13 @@ const AboutSection = () => {
         >
           <div className="rounded-2xl overflow-hidden shadow-xl group relative cursor-pointer" onClick={() => setPlaying(true)}>
             {playing ? (
-              <iframe
-                src="https://www.youtube.com/embed/HQXWvbdOLYU?autoplay=1"
-                title="About Vijaya Eye Clinic"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-                className="w-full h-[400px]"
-              />
+             <iframe
+  src="https://www.youtube.com/embed/jcNwaWrTHEg?autoplay=1"
+  title="About Vijaya Eye Clinic"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+  allowFullScreen
+  className="w-full h-[400px]"
+/>
             ) : (
               <>
                 <img src={aboutImg} alt="Vijaya Eye Clinic Reception" className="w-full h-[400px] object-cover group-hover:scale-105 transition-transform duration-500" />

@@ -3,31 +3,113 @@ import SpecialityContent from "@/components/SpecialityContent";
 import { Helmet } from "react-helmet-async";
 import specialityImg from "@/assets/speciality-vitrectomy.jpg";
 
+const vitrectomySchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "MedicalProcedure",
+      "name": "Vitrectomy Surgery in Bangalore",
+      "alternateName": [
+        "Best Vitrectomy Surgery in Bangalore",
+        "Best vitreoretinal surgeon in Bangalore",
+        "Micro-incision vitrectomy surgery (MIVS) Vijayanagar",
+        "Macular hole surgery hospital Bangalore",
+        "Vitreous hemorrhage treatment Bangalore"
+      ],
+      "procedureType": "SurgicalProcedure",
+      "bodyLocation": "Retina and Vitreous",
+      "description": "Premier center for Vitrectomy Surgery in Bangalore at Vijaya Eye Clinic. Offering sutureless 23G/25G micro-incision vitrectomy surgery (MIVS), macular hole repair, retinal detachment surgery, and diabetic vitreous hemorrhage treatment.",
+      "provider": {
+        "@type": "MedicalClinic",
+        "name": "Vijaya Eye Clinic",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Vijayanagar",
+          "addressLocality": "Bangalore",
+          "addressRegion": "Karnataka",
+          "addressCountry": "IN"
+        }
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is the vitrectomy surgery cost in Bangalore?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Vitrectomy surgery cost in Bangalore depends on procedural complexity, gauge size (23G/25G sutureless MIVS), and whether gas or silicone oil tamponade is required. Vijaya Eye Clinic offers transparent package pricing with cashless Mediclaim and major health insurance TPA coverage."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How is macular hole surgery hospital Bangalore treatment performed?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Macular hole surgery involves micro-incision vitrectomy combined with internal limiting membrane (ILM) peeling and an intraocular gas bubble tamponade to facilitate macular hole closure and central visual restoration."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Where can I get micro-incision vitrectomy surgery (MIVS) in Vijayanagar?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Vijaya Eye Clinic in Vijayanagar, Bangalore provides advanced sutureless 23G and 25G micro-incision vitrectomy surgery (MIVS) using modern operating microscopes for rapid recovery and minimal post-operative discomfort."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "When is surgery needed for vitreous hemorrhage treatment Bangalore?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Vitreous hemorrhage treatment in Bangalore requires vitrectomy when persistent blood in the vitreous cavity fails to clear spontaneously within a few weeks or when underlying tractional retinal detachment is suspected."
+          }
+        }
+      ]
+    }
+  ]
+};
+
 const VitrectomySurgery = () => (
   <>
     <Helmet>
-      <title>Vitrectomy Surgery in Bangalore | Advanced Eye Surgery - Vijaya Eye Clinic</title>
-      <meta name="description" content="Advanced vitrectomy surgery in Bangalore for retinal conditions. Expert treatment for retinal detachment and macular holes." />
-      <meta name="keywords" content="vitrectomy surgery, retinal surgery, retinal detachment repair, macular hole, eye surgery bangalore" />
+      <title>Vitrectomy Surgery in Bangalore | Best Vitreoretinal Surgeon</title>
+      <meta
+        name="description"
+        content="Get the best vitrectomy surgery in Bangalore at Vijaya Eye Clinic. Consult top vitreoretinal surgeons for 23G/25G MIVS, retinal detachment & macular hole repair."
+      />
       <link rel="canonical" href="https://vijayaeyeclinic.com/specialities/vitrectomy-surgery" />
-      <meta property="og:title" content="Vitrectomy Surgery in Bangalore | Advanced Eye Surgery - Vijaya Eye Clinic" />
-      <meta property="og:description" content="Advanced vitrectomy surgery in Bangalore for retinal conditions and expert treatment." />
+      <meta property="og:title" content="Vitrectomy Surgery in Bangalore | Best Vitreoretinal Surgeon" />
+      <meta
+        property="og:description"
+        content="Advanced sutureless micro-incision vitrectomy surgery (MIVS), diabetic vitreous hemorrhage treatment, and macular hole surgery in Bangalore."
+      />
       <meta property="og:url" content="https://vijayaeyeclinic.com/specialities/vitrectomy-surgery" />
-      <meta name="twitter:title" content="Vitrectomy Surgery in Bangalore | Advanced Eye Surgery - Vijaya Eye Clinic" />
-      <meta name="twitter:description" content="Advanced vitrectomy surgery in Bangalore for retinal conditions and expert treatment." />
+      <meta name="twitter:title" content="Vitrectomy Surgery in Bangalore | Vijaya Eye Clinic" />
+      <meta
+        name="twitter:description"
+        content="Expert 23G/25G micro-incision vitrectomy surgery and retinal detachment repair in Vijayanagar, Bangalore."
+      />
+
+      {/* Structured Medical & FAQ Schema */}
+      <script type="application/ld+json">
+        {JSON.stringify(vitrectomySchema)}
+      </script>
     </Helmet>
-    <SpecialityLayout title="Vitrectomy Surgery">
+
+    <SpecialityLayout title="Vitrectomy Surgery in Bangalore">
       <SpecialityContent
-        heading="Advanced Vitrectomy Surgery Services At Vijaya Eye Clinic"
-        intro="We offer advanced Vitrectomy surgery services to address various retinal conditions and restore optimal eye health. Vitrectomy surgery is a delicate procedure that involves the removal of the vitreous gel from the center of the eye to treat conditions affecting the retina and vitreous humor. Our specialized vitrectomy surgeries are performed by experienced retinal surgeons using state-of-the-art equipment and techniques, ensuring the highest standard of care for our patients."
+        heading="Best Vitrectomy Surgery in Bangalore for Complex Retinal Care"
+        intro="Restore visual clarity and retinal stability with specialized Vitrectomy Surgery in Bangalore at Vijaya Eye Clinic. Recognized for delivering the best vitrectomy surgery in Bangalore, our team combines advanced microsurgical technology with over 35 years of clinical trust to manage delicate conditions affecting the vitreous and posterior eye segment."
         image={specialityImg}
-        description="At Vijaya Eye Clinic, we understand that undergoing vitrectomy surgery can be a significant decision for our patients. That's why our compassionate team provides comprehensive pre-operative evaluations, thorough explanation of the procedure, and personalized post-operative care to ensure a comfortable and successful recovery. We are dedicated to supporting our patients every step of the way, from initial consultation to follow-up visits and beyond."
-        whatIsIt="Vitrectomy surgery is a specialized procedure performed to treat various retinal conditions by removing the vitreous gel from the center of the eye. The vitreous gel is a clear, gel-like substance that fills the space between the lens and the retina. This surgery is often recommended to repair retinal detachments, treat macular holes, remove epiretinal membranes, and manage vitreous hemorrhages."
-        whatDoesItInvolve="During Vitrectomy surgery, the patient is placed under local or general anesthesia to ensure comfort throughout the procedure. Small incisions are made in the eye, and a tiny probe is inserted to remove the vitreous gel. Additional instruments may be used to address specific retinal issues, such as repairing tears or removing scar tissue. Once the necessary repairs are made, the eye is carefully sealed, and the incisions are closed."
-        suitableFor="Vitrectomy surgery is suitable for individuals diagnosed with various retinal conditions that cannot be effectively managed with non-surgical treatments alone. It is commonly recommended for patients with retinal detachments, macular holes, epiretinal membranes, and vitreous hemorrhages. Your eye care provider will evaluate your specific condition and medical history to determine if vitrectomy surgery is the most appropriate treatment option for you."
-        risks="As with any surgical procedure, Vitrectomy surgery carries certain risks and potential complications. These may include infection, bleeding, retinal tears or detachment, elevated eye pressure, and cataract formation. However, these risks are minimized by the expertise of our experienced retinal surgeons and the advanced technology available at Vijaya Eye Clinic. Before undergoing surgery, your eye care provider will thoroughly discuss the potential risks and benefits with you to ensure you are well-informed and prepared."
-        costInfo="The cost of Vitrectomy surgery can vary depending on factors such as the specific procedure required, the complexity of the condition, and any additional tests or procedures necessary. To obtain accurate pricing information and explore your options for vitrectomy surgery at Vijaya Eye Clinic, we encourage you to schedule an appointment or visit our clinic. Our experienced vitreoretinal surgeons specialize in performing vitrectomy surgery and will assess your individual needs, conduct a thorough examination, and provide personalized treatment recommendations tailored to your situation."
-        ctaLine="Don't Let Retinal Conditions Affect Your Vision And Quality Of Life."
+        description="Led by the best vitreoretinal surgeon in Bangalore, Vijaya Eye Clinic utilizes state-of-the-art sutureless vitreoretinal platforms and wide-angle viewing systems. We specialize in sutureless micro-incision vitrectomy surgery (MIVS) in Vijayanagar using 23G and 25G instrumentation, ensuring self-sealing incisions, zero stitch irritation, and faster visual rehabilitation."
+        whatIsIt="Vitrectomy surgery is a microsurgical procedure performed to remove clouded or traction-causing vitreous gel from the inner eye chamber. As an advanced macular hole surgery hospital Bangalore, we perform internal limiting membrane (ILM) peeling and epiretinal membrane removal, alongside prompt interventions for sudden vitreous hemorrhage treatment Bangalore caused by proliferative diabetic retinopathy."
+        whatDoesItInvolve="Treatment begins with high-definition Spectral Domain OCT scans, B-scan ultrasonography, and wide-field fundus imaging. During the outpatient daycare procedure, micro-cannulas are placed through the sclera to clear the vitreous gel, relieve traction, apply endolaser photocoagulation, and place gas or medical-grade silicone oil tamponades as needed under gentle local anesthesia."
+        suitableFor="This intervention is critical for individuals suffering from rhegmatogenous or tractional retinal detachments, non-clearing diabetic vitreous hemorrhage, full-thickness macular holes, post-cataract dropped lens fragments, or severe ocular trauma."
+        risks="Vitrectomy procedures are carried out in sterile, modular laminar air-flow surgical suites under stringent ophthalmic infection protocols. Temporary post-op intraocular pressure fluctuations or cataract progression are carefully monitored and managed with customized medical regimens to ensure optimum visual outcomes."
+        costInfo="Vitrectomy surgery cost in Bangalore varies based on the condition stage, whether combined with cataract surgery (phaco-vitrectomy), and the choice of tamponade (gas vs. silicone oil). Vijaya Eye Clinic provides upfront transparent pricing with full support for cashless Mediclaim and major health insurance TPAs."
+        ctaLine="Consult the Best Vitreoretinal Surgeon in Bangalore Today."
       />
     </SpecialityLayout>
   </>
