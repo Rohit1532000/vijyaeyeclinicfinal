@@ -50,6 +50,37 @@ const locations = [
   { city: "Central Asia & CIS", countries: "Uzbekistan, Kazakhstan, Turkmenistan, Kyrgyzstan" },
 ];
 
+const internationalCountries = [
+  { name: "Nigeria", path: "/international/nigeria" },
+  { name: "Kenya", path: "/international/kenya" },
+  { name: "Malawi", path: "/international/malawi" },
+  { name: "Botswana", path: "/international/botswana" },
+  { name: "Zimbabwe", path: "/international/zimbabwe" },
+  { name: "Ghana", path: "/international/ghana" },
+  { name: "Tanzania", path: "/international/tanzania" },
+  { name: "Ethiopia", path: "/international/ethiopia" },
+  { name: "Somalia", path: "/international/somalia" },
+  { name: "Senegal", path: "/international/senegal" },
+  { name: "Saudi Arabia", path: "/international/saudi-arabia" },
+  { name: "UAE", path: "/international/uae" },
+  { name: "Oman", path: "/international/oman" },
+  { name: "Kuwait", path: "/international/kuwait" },
+  { name: "Qatar", path: "/international/qatar" },
+  { name: "Bahrain", path: "/international/bahrain" },
+  { name: "Yemen", path: "/international/yemen" },
+  { name: "Iraq", path: "/international/iraq" },
+  { name: "Myanmar", path: "/international/myanmar" },
+  { name: "Cambodia", path: "/international/cambodia" },
+  { name: "Vietnam", path: "/international/vietnam" },
+  { name: "Indonesia", path: "/international/indonesia" },
+  { name: "Laos", path: "/international/laos" },
+  { name: "Philippines", path: "/international/philippines" },
+  { name: "Nepal", path: "/international/nepal" },
+  { name: "Sri Lanka", path: "/international/sri-lanka" },
+  { name: "Maldives", path: "/international/maldives" },
+  { name: "Bangladesh", path: "/international/bangladesh" },
+];
+
 const testimonials = [
   { name: "Ahmed Al-Rashid", country: "UAE", text: "I traveled from Dubai for cataract surgery and the experience was exceptional. The international team handled everything — from visa to stay. Truly world-class!", rating: 5 },
   { name: "Sarah Kimani", country: "Kenya", text: "Vijaya Eye Clinic treated my glaucoma with great expertise. The multilingual staff made me feel at home. Highly recommended for African patients!", rating: 5 },
@@ -324,7 +355,7 @@ const InternationalPatientTreatmentPage = () => {
       </section>
 
       {/* ── Locations ── */}
-      <section className="section-padding section-alt">
+      {/* <section className="section-padding section-alt">
         <div className="container mx-auto">
           <motion.div className="text-center mb-14" initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
             <span className="text-primary font-semibold text-sm uppercase tracking-wider">Our Reach</span>
@@ -343,6 +374,44 @@ const InternationalPatientTreatmentPage = () => {
                 <Globe className="w-8 h-8 mb-3 text-primary-foreground/80" />
                 <h3 className="font-heading font-bold text-xl mb-2">{loc.city}</h3>
                 <p className="text-primary-foreground/80 text-sm">{loc.countries}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section> */}
+
+      {/* ── Global Reach ── */}
+      <section className="section-padding section-alt">
+        <div className="container mx-auto">
+          <motion.div
+            className="text-center mb-14"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
+            <span className="text-primary font-semibold text-sm uppercase tracking-wider">International Patients</span>
+            <h2 className="text-3xl md:text-4xl font-heading font-bold text-foreground mt-2">Global Reach, Trusted Eye Care</h2>
+            <p className="text-muted-foreground max-w-3xl mx-auto mt-4 leading-relaxed">
+              Welcoming international patients from across the globe with world-class ophthalmic treatments, seamless teleconsultations, and dedicated travel support.
+            </p>
+          </motion.div>
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5 max-w-6xl mx-auto">
+            {internationalCountries.map((country, i) => (
+              <motion.div
+                key={country.path}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.4, delay: i * 0.04 }}
+              >
+                <Link
+                  to={country.path}
+                  className="flex items-center gap-3 h-full rounded-xl border border-border/50 bg-card p-5 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-primary/40 hover:shadow-lg group"
+                >
+                  <Globe className="w-5 h-5 shrink-0 text-primary group-hover:scale-110 transition-transform" />
+                  <span className="font-heading font-semibold text-foreground group-hover:text-primary transition-colors">{country.name}</span>
+                </Link>
               </motion.div>
             ))}
           </div>
