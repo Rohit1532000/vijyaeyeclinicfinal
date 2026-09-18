@@ -1,11 +1,107 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
-import { Phone, Mail, MapPin, TrendingUp, Shield, Users, Award, ChevronRight } from "lucide-react";
+import {
+  Phone,
+  Mail,
+  MapPin,
+  TrendingUp,
+  Shield,
+  Users,
+  Award,
+  ChevronRight,
+  Plane,
+  Eye,
+  CheckCircle,
+  Activity,
+  Layers,
+  Sparkles,
+  Baby,
+  Smile,
+  Scissors
+} from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Helmet } from "react-helmet-async";
+
+const somaliaSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Hospital",
+      "@id": "https://vijayaeyeclinic.com/#hospital",
+      "name": "Vijaya Eye Clinic Super Specialty Eye Hospital",
+      "alternateName": [
+        "Trusted Eye Surgery in Bangalore for Somali Patients",
+        "Best Eye Hospital in Bangalore for Somalia Patients",
+        "Top Eye Hospital for Somalia Patients in India"
+      ],
+      "url": "https://vijayaeyeclinic.com/international/somalia",
+      "image": "https://vijayaeyeclinic.com/logo.png",
+      "telephone": "+91-9739302523",
+      "email": "care@vijayaeyeclinic.com",
+      "priceRange": "$$",
+      "description": "Vijaya Eye Clinic is a premier super specialty eye hospital in Bangalore, India providing advanced cataract surgery, LASIK, complex retina vitrectomy, traumatic eye injury reconstruction, cornea transplant, glaucoma management, pediatric ophthalmology, squint realignment, and oculoplasty for international patients from Somalia (Mogadishu, Hargeisa, Garowe, Bosaso, Kismayo).",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "PV Plaza, #2, 5th Main Road, MC Layout, Opp. Sarvajna Bus Stop, Vijayanagar",
+        "addressLocality": "Bengaluru",
+        "addressRegion": "Karnataka",
+        "postalCode": "560040",
+        "addressCountry": "IN"
+      },
+      "areaServed": [
+        {
+          "@type": "Country",
+          "name": "Somalia"
+        },
+        {
+          "@type": "Country",
+          "name": "India"
+        }
+      ],
+      "availableLanguage": ["English", "Somali Assistance", "Arabic", "Hindi"]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How many days should I plan for eye treatment in Bangalore?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "For blade-free LASIK or stitchless micro-incision cataract surgery, a 4 to 6 day stay is ideal. Complex vitreoretinal repairs, ocular trauma reconstruction, or corneal transplants typically require 7 to 14 days before fit-to-fly clearance is granted."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How does Vijaya Eye Clinic assist with Indian Medical Visa paperwork for Somali citizens?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Upon reviewing your optical reports and passport copies via WhatsApp or email, our international desk prepares an official hospital Medical Visa Invitation Letter within 24 hours for fast-track processing with Indian missions handling Somalia applications."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can you coordinate travel from Mogadishu (MGQ) or Hargeisa (HGA)?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, our team coordinates flight reception connecting from Aden Adde International Airport (MGQ) in Mogadishu or Egal International Airport (HGA) in Hargeisa to Bangalore (BLR) and arranges private airport transfers directly to vetted serviced apartments."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Are serviced apartments with private kitchens available near the hospital?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, both our Vijayanagar and Nagadevanahalli centers are surrounded by vetted, comfortable serviced apartments equipped with private kitchens, allowing Somali families to prepare familiar meals during their recovery."
+          }
+        }
+      ]
+    }
+  ]
+};
 
 const SomaliaLanding = () => {
   const navigate = useNavigate();
@@ -18,179 +114,470 @@ const SomaliaLanding = () => {
   };
 
   const advantages = [
-    { icon: TrendingUp, title: "Expert Retinal & Traumatic Eye Care", desc: "Complex retinal re-attachments and structural reconstructions" },
-    { icon: Shield, title: "Affordable All-Inclusive Packages", desc: "Transparent options bundling diagnostics, surgery, and follow-ups" },
-    { icon: Users, title: "Warm Attentive Hospitality", desc: "Currency exchange and accommodation support" },
-    { icon: Award, title: "40+ Years Excellence", desc: "Trusted expertise and proven outcomes" },
+    {
+      icon: TrendingUp,
+      title: "Expert Retinal & Traumatic Eye Care",
+      desc: "Complex retinal detachments, traumatic globe reconstructions, 23G/25G vitrectomy, and high-definition Spectral OCT imaging."
+    },
+    {
+      icon: Shield,
+      title: "Affordable All-Inclusive Packages",
+      desc: "Transparent packages bundling diagnostics, surgery, and follow-ups with predictable USD/INR tariffs protecting against currency swings."
+    },
+    {
+      icon: Users,
+      title: "Warm Attentive Hospitality",
+      desc: "Dedicated international liaisons managing visa invitation letters, Kempegowda Airport reception, local SIM cards, and serviced apartments."
+    },
+    {
+      icon: Award,
+      title: "35+ Years Clinical Heritage",
+      desc: "Proven clinical excellence and trusted surgical outcomes across anterior and posterior eye segments led by senior eye surgeons."
+    },
   ];
 
-  const procedures = [
-    { title: "Advanced Vitreoretinal Care", desc: "Precise micro-surgeries for complex retinal conditions" },
-    { title: "Modern Stitchless Cataract Surgery", desc: "10-minute removals with advanced IOLs" },
-    { title: "Traumatic Eye Injury Management", desc: "Expert reconstruction and repair" },
-    { title: "Retinal Detachment Treatment", desc: "Advanced surgical interventions" },
+  const treatmentSpecialities = [
+    {
+      icon: Eye,
+      title: "Cataract Surgery in Bangalore for Somali Patients",
+      desc: "Micro-Incision Cataract Surgery (MICS) with imported Toric, Multifocal, and Trifocal IOL implants from Alcon and Zeiss for total spectacle independence.",
+      tag: "Daycare | 15 Mins"
+    },
+    {
+      icon: Sparkles,
+      title: "LASIK Surgery in Bangalore for Somali Patients",
+      desc: "Blade-free Contoura Vision, Femto-LASIK, and EVO ICL phakic lens implants for permanent glasses removal with fast 24-hour visual recovery.",
+      tag: "Specs Removal"
+    },
+    {
+      icon: Activity,
+      title: "Retina Treatment in Bangalore for Somali Patients",
+      desc: "Comprehensive diabetic retinopathy management, anti-VEGF injections (Lucentis, Eylea), and 23G/25G sutureless vitrectomy for complex retinal detachments.",
+      tag: "Retina Specialist"
+    },
+    {
+      icon: Layers,
+      title: "Glaucoma Treatment in Bangalore for Somali Patients",
+      desc: "Advanced optic nerve OCT screening, computerized visual field perimetry, Selective Laser Trabeculoplasty (SLT), and surgical trabeculectomy.",
+      tag: "Vision Protection"
+    },
+    {
+      icon: Shield,
+      title: "Cornea Treatment in Bangalore for Somali Patients",
+      desc: "Keratoconus C3R collagen cross-linking, emergency protocols for corneal ulcers, and authorized partial or full-thickness corneal transplant surgery.",
+      tag: "Cornea Specialist"
+    },
+    {
+      icon: Baby,
+      title: "Pediatric Ophthalmology in Bangalore for Somali Patients",
+      desc: "Gentle child eye exams, cycloplegic refraction, amblyopia lazy eye therapy, and pediatric cataract procedures in a warm environment.",
+      tag: "Child Eye Care"
+    },
+    {
+      icon: Smile,
+      title: "Squint Eye Treatment in Bangalore for Somali Patients",
+      desc: "Precision strabismus surgery for children and adults to realign visual axes, restore stereo 3D depth perception, and enhance facial balance.",
+      tag: "Strabismus Surgery"
+    },
+    {
+      icon: Scissors,
+      title: "Oculoplasty Treatment in Bangalore for Somali Patients",
+      desc: "Traumatic eyelid reconstruction, ptosis (drooping eyelid) correction, cosmetic blepharoplasty, and DCR tear duct obstruction surgery.",
+      tag: "Eyelid & Orbit"
+    }
   ];
 
   const steps = [
-    { number: "01", title: "WhatsApp Document Review", desc: "Send your initial eye reports via WhatsApp for assessment" },
-    { number: "02", title: "Visa Invitation", desc: "Official medical visa invitation letter provided" },
-    { number: "03", title: "Bangalore Airport Reception", desc: "Direct transport from Bangalore Airport (BLR) to your branch" },
-    { number: "04", title: "Seamless Follow-ups", desc: "Virtual follow-ups scheduled with your operating surgeon" },
+    {
+      number: "01",
+      title: "WhatsApp Document Review",
+      desc: "Share optical scans, B-scan reports, or doctor prescriptions from Mogadishu or Hargeisa via WhatsApp (+91 9739302523) for an expert evaluation and quote."
+    },
+    {
+      number: "02",
+      title: "Medical Visa (V-Visa) Letter",
+      desc: "Receive an official hospital Medical Visa Invitation Letter within 24 hours to support expedited visa processing."
+    },
+    {
+      number: "03",
+      title: "Bangalore Airport Reception & Stay",
+      desc: "Executive airport pickup from Bangalore International Airport (BLR) and check-in to vetted partner serviced apartments with self-cooking kitchens."
+    },
+    {
+      number: "04",
+      title: "Daycare Surgery & Follow-up",
+      desc: "Undergo advanced daycare microsurgery, receive a fit-to-fly certificate, and continue post-op virtual tele-consultations back home in Somalia."
+    }
   ];
 
   const faqs = [
     {
       q: "How many days should I plan for my eye treatment?",
-      a: "Most complex retinal surgeries require 7-14 days in Bangalore including comprehensive diagnostics and recovery monitoring."
+      a: "Simple procedures like blade-free LASIK or micro-incision cataract surgery require 4 to 6 days. Complex vitreoretinal repairs, traumatic eye reconstructions, or corneal transplants need 7 to 14 days for comprehensive post-op monitoring."
     },
     {
       q: "Can you arrange travel from Mogadishu or Hargeisa?",
-      a: "Yes, we coordinate with airlines from Mogadishu (Aden Adde Airport) and Hargeisa, arranging complete airport pickup and transfers."
+      a: "Yes. While you arrange flights connecting from Aden Adde International Airport (MGQ) in Mogadishu or Egal International Airport (HGA) in Hargeisa to Bangalore (BLR), our team coordinates complete airport pickup, ground transit, and accommodation."
     },
     {
       q: "What currencies and payment methods do you accept?",
-      a: "We accept multiple payment options with pricing in stable USD/INR currencies for your financial security."
+      a: "We accept international credit cards, bank wire transfers, and currency exchange with itemized package quotes locked in USD or INR to ensure complete financial predictability."
     },
     {
       q: "What about meals and accommodation during recovery?",
-      a: "We arrange comfortable apartments with full kitchen facilities near our centers where you can prepare familiar meals."
+      a: "We arrange vetted serviced apartments and hotels near our Vijayanagar and Nagadevanahalli centers featuring functional private kitchens, allowing families to prepare familiar Somali meals."
     },
     {
       q: "How is my recovery monitored after returning to Somalia?",
-      a: "Continuous support through virtual consultations, WhatsApp messaging, and regular check-ins with your surgeon."
-    },
+      a: "We provide structured tele-health connectivity through scheduled virtual consultations over WhatsApp or Zoom, keeping you in direct contact with your operating surgeon."
+    }
   ];
 
   return (
     <>
       <Helmet>
         <title>Trusted Eye Surgery in Bangalore for Somali Patients | Vijaya Eye Clinic</title>
-        <meta name="description" content="High-quality, affordable eye care in Bangalore, India for patients from Somalia." />
+        <meta
+          name="description"
+          content="High-quality, affordable eye surgery in Bangalore, India for patients from Somalia (Mogadishu, Hargeisa). Advanced cataract, LASIK, retina vitrectomy, cornea & trauma repair."
+        />
+        {/* Combined Keywords: Original + All 8 Core Procedures */}
+        <meta
+          name="keywords"
+          content="trusted eye surgery in bangalore for somali patients, best eye hospital in bangalore for somalia patients, cataract surgery bangalore vijaya eye clinic, eye surgery cost india from somalia, cataract surgery in bangalore for somali patients, lasik surgery in bangalore for somali patients, retina treatment in bangalore for somali patients, cornea treatment in bangalore for somali patients, glaucoma treatment in bangalore for somali patients, pediatric ophthalmology in bangalore for somali patients, squint eye treatment in bangalore for somali patients, oculoplasty treatment in bangalore for somali patients"
+        />
+
+        {/* Canonical Link */}
+        <link rel="canonical" href="https://vijayaeyeclinic.com/international/somalia" />
+
+        {/* 2-Way Cross-Referenced International Hreflangs */}
+        <link rel="alternate" hrefLang="en-SO" href="https://vijayaeyeclinic.com/international/somalia" />
+        <link rel="alternate" hrefLang="en-BH" href="https://vijayaeyeclinic.com/international/bahrain" />
+        <link rel="alternate" hrefLang="en-BD" href="https://vijayaeyeclinic.com/international/bangladesh" />
+        <link rel="alternate" hrefLang="en-BW" href="https://vijayaeyeclinic.com/international/botswana" />
+        <link rel="alternate" hrefLang="en-KH" href="https://vijayaeyeclinic.com/international/cambodia" />
+        <link rel="alternate" hrefLang="en-ET" href="https://vijayaeyeclinic.com/international/ethiopia" />
+        <link rel="alternate" hrefLang="en-GH" href="https://vijayaeyeclinic.com/international/ghana" />
+        <link rel="alternate" hrefLang="en-ID" href="https://vijayaeyeclinic.com/international/indonesia" />
+        <link rel="alternate" hrefLang="en-IQ" href="https://vijayaeyeclinic.com/international/iraq" />
+        <link rel="alternate" hrefLang="en-KE" href="https://vijayaeyeclinic.com/international/kenya" />
+        <link rel="alternate" hrefLang="en-KW" href="https://vijayaeyeclinic.com/international/kuwait" />
+        <link rel="alternate" hrefLang="en-LA" href="https://vijayaeyeclinic.com/international/laos" />
+        <link rel="alternate" hrefLang="en-MW" href="https://vijayaeyeclinic.com/international/malawi" />
+        <link rel="alternate" hrefLang="en-MV" href="https://vijayaeyeclinic.com/international/maldives" />
+        <link rel="alternate" hrefLang="en-NP" href="https://vijayaeyeclinic.com/international/nepal" />
+        <link rel="alternate" hrefLang="en-MM" href="https://vijayaeyeclinic.com/international/myanmar" />
+        <link rel="alternate" hrefLang="en-NG" href="https://vijayaeyeclinic.com/international/nigeria" />
+        <link rel="alternate" hrefLang="en-OM" href="https://vijayaeyeclinic.com/international/oman" />
+        <link rel="alternate" hrefLang="en-PH" href="https://vijayaeyeclinic.com/international/philippines" />
+        <link rel="alternate" hrefLang="en-QA" href="https://vijayaeyeclinic.com/international/qatar" />
+        <link rel="alternate" hrefLang="en-SA" href="https://vijayaeyeclinic.com/international/saudi-arabia" />
+        <link rel="alternate" hrefLang="en-SN" href="https://vijayaeyeclinic.com/international/senegal" />
+        <link rel="alternate" hrefLang="x-default" href="https://vijayaeyeclinic.com/international/bahrain" />
+
+        {/* Structured Hospital & FAQ Schema */}
+        <script type="application/ld+json">
+          {JSON.stringify(somaliaSchema)}
+        </script>
       </Helmet>
 
       <Header />
       <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
-        <section className="relative min-h-[600px] flex items-center justify-center bg-gradient-to-r from-slate-900 via-blue-900 to-slate-900 text-white px-4 py-20">
+
+        {/* Hero Section */}
+        <section className="relative min-h-[640px] flex items-center justify-center bg-gradient-to-r from-slate-900 via-blue-900 to-slate-900 text-white px-4 py-20">
           <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">Advanced Eye Care for Patients from Somalia</h1>
-            <p className="text-lg md:text-xl text-blue-100 mb-8">From Mogadishu, Hargeisa, and Garowe seeking specialized treatments trust Vijaya Eye Clinic.</p>
+            <span className="inline-flex items-center gap-2 bg-blue-500/20 text-blue-300 text-sm font-semibold px-4 py-1.5 rounded-full mb-6 border border-blue-400/30">
+              <Plane className="w-4 h-4" /> Somalia to Bangalore Medical Care Concierge
+            </span>
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
+              Advanced Eye Care for Patients from Somalia
+            </h1>
+            <p className="text-lg md:text-xl text-blue-100 mb-8 max-w-3xl mx-auto leading-relaxed">
+              Seeking specialized retinal care, trauma reconstruction, or micro-incision cataract surgery from <strong>Mogadishu, Hargeisa, or Garowe</strong>? Vijaya Eye Clinic provides world-class surgical expertise with comprehensive visa assistance.
+            </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button onClick={() => navigate('/contact-us')} size="lg" className="bg-blue-500 hover:bg-blue-600 text-white px-8">Get Free Medical Consultation</Button>
-              <Button onClick={() => window.location.href = "tel:08026721818"} size="lg" variant="outline" className="text-black border-black hover:bg-black hover:text-white px-8"><Phone className="w-4 h-4 mr-2" />Call Our Team</Button>
+              <Button
+                onClick={() => navigate('/contact-us')}
+                size="lg"
+                className="bg-blue-500 hover:bg-blue-600 text-white px-8 rounded-full font-semibold shadow-lg"
+              >
+                Get Free Medical Consultation & Quote
+              </Button>
+              <Button
+                onClick={() => window.location.href = "https://wa.me/919739302523"}
+                size="lg"
+                variant="outline"
+                className="text-white border-white/50 bg-white/10 hover:bg-white hover:text-slate-900 px-8 rounded-full font-semibold"
+              >
+                WhatsApp Desk (+91 9739302523)
+              </Button>
             </div>
           </div>
         </section>
 
-        <section className="py-16 px-4 bg-white">
-          <div className="max-w-4xl mx-auto">
-            <p className="text-lg text-gray-700">Our two state-of-the-art super-specialty hospitals—in <strong>Vijayanagar</strong> and <strong>Nagadevanahalli</strong>—combine advanced technology with clear, transparent pricing.</p>
+        {/* Overview Bar */}
+        <section className="py-14 px-4 bg-white border-b border-slate-100">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
+              Advanced Clinical Care with Complete Travel Support
+            </h2>
+            <p className="text-gray-700 leading-relaxed text-base md:text-lg">
+              Our two state-of-the-art super-specialty hospitals—in <strong>Vijayanagar</strong> and <strong>Nagadevanahalli</strong>—combine internationally trained surgeons with top-tier Western technology for elite-level vision restoration at 60% to 75% cost savings compared to private regional alternatives.
+            </p>
           </div>
         </section>
 
-        <section className="py-16 px-4">
+        {/* Specialized Treatments Section (All 8 Core Specialities) */}
+        <section className="py-20 px-4 bg-slate-50">
           <div className="max-w-6xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-12 text-center">Why Somali Patients Choose Vijaya Eye Clinic</h2>
+            <div className="text-center mb-16">
+              <span className="text-blue-600 font-semibold uppercase tracking-wider text-sm">
+                Super Specialty Procedures
+              </span>
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mt-2">
+                Specialized Treatment Offerings for Somali Patients
+              </h2>
+              <p className="text-gray-600 mt-3 max-w-2xl mx-auto">
+                Comprehensive ophthalmic surgical solutions tailored to international recovery timelines.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              {treatmentSpecialities.map((item, idx) => (
+                <motion.div
+                  key={idx}
+                  className="bg-white rounded-2xl p-7 shadow-sm border border-slate-200/80 hover:shadow-md hover:border-blue-300 transition-all flex flex-col justify-between"
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: idx * 0.05 }}
+                >
+                  <div>
+                    <div className="flex items-center justify-between mb-4">
+                      <div className="w-12 h-12 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center">
+                        <item.icon className="w-6 h-6" />
+                      </div>
+                      <span className="text-xs font-semibold px-3 py-1 bg-slate-100 text-slate-700 rounded-full">
+                        {item.tag}
+                      </span>
+                    </div>
+                    <h3 className="text-xl font-bold text-gray-900 mb-3">
+                      {item.title}
+                    </h3>
+                    <p className="text-gray-600 text-sm leading-relaxed mb-4">
+                      {item.desc}
+                    </p>
+                  </div>
+                  <div
+                    className="pt-2 border-t border-slate-100 flex items-center text-blue-600 text-sm font-semibold gap-1 cursor-pointer hover:underline"
+                    onClick={() => navigate('/contact-us')}
+                  >
+                    Inquire for Treatment Plan <ChevronRight className="w-4 h-4" />
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Why Patients from Somalia Choose Us */}
+        <section className="py-20 px-4 bg-white">
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-16">
+              <span className="text-blue-600 font-semibold uppercase tracking-wider text-sm">
+                Patient Benefits
+              </span>
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mt-2">
+                Why Somali Patients Choose Vijaya Eye Clinic
+              </h2>
+            </div>
+
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {advantages.map((adv, idx) => (
-                <div key={idx} className="bg-white p-8 rounded-lg shadow-md">
+                <motion.div
+                  key={idx}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  className="bg-slate-50 p-8 rounded-2xl border border-slate-200"
+                >
                   <adv.icon className="w-12 h-12 text-blue-600 mb-4" />
-                  <h3 className="text-xl font-semibold text-gray-900 mb-3">{adv.title}</h3>
-                  <p className="text-gray-600">{adv.desc}</p>
-                </div>
+                  <h3 className="text-xl font-bold text-gray-900 mb-3">{adv.title}</h3>
+                  <p className="text-gray-600 leading-relaxed text-sm">{adv.desc}</p>
+                </motion.div>
               ))}
             </div>
           </div>
         </section>
 
-        <section className="py-16 px-4 bg-gradient-to-r from-slate-50 to-blue-50">
+        {/* Travel & Treatment Steps */}
+        <section className="py-20 px-4 bg-gradient-to-r from-slate-50 to-blue-50">
           <div className="max-w-6xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-12 text-center">Specialized Treatment Offerings</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {procedures.map((proc, idx) => (
-                <div key={idx} className="bg-white p-8 rounded-lg shadow-md border-l-4 border-blue-500">
-                  <h3 className="text-xl font-semibold text-gray-900 mb-3">{proc.title}</h3>
-                  <p className="text-gray-600">{proc.desc}</p>
+            <div className="text-center mb-16">
+              <span className="text-blue-600 font-semibold uppercase tracking-wider text-sm">
+                Smooth Logistics
+              </span>
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mt-2">
+                Seamless Travel Support from Somalia
+              </h2>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+              {steps.map((step, idx) => (
+                <div
+                  key={idx}
+                  className="bg-white p-7 rounded-2xl shadow-sm relative border border-slate-200 flex flex-col justify-between"
+                >
+                  <div>
+                    <div className="text-4xl font-extrabold text-blue-200 mb-4 font-mono">
+                      {step.number}
+                    </div>
+                    <h3 className="text-lg font-bold text-gray-900 mb-3">
+                      {step.title}
+                    </h3>
+                    <p className="text-gray-600 text-xs leading-relaxed">
+                      {step.desc}
+                    </p>
+                  </div>
                 </div>
               ))}
             </div>
           </div>
         </section>
 
+        {/* Bangalore Centers & Hospitality */}
         <section className="py-16 px-4 bg-white">
           <div className="max-w-6xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-12 text-center">Seamless Travel Support from Somalia</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {steps.map((step, idx) => (
-                <div key={idx} className="bg-gradient-to-br from-slate-50 to-blue-50 p-8 rounded-lg shadow-md relative">
-                  <div className="absolute top-4 right-4 text-5xl font-bold text-blue-100">{step.number}</div>
-                  <h3 className="text-xl font-semibold text-gray-900 mb-3">{step.title}</h3>
-                  <p className="text-gray-600">{step.desc}</p>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-12 text-center">
+              Our Bangalore Facilities & Extended Stay Support
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+              <div className="bg-slate-50 p-8 rounded-2xl border border-slate-200">
+                <MapPin className="w-8 h-8 text-blue-600 mb-4" />
+                <h3 className="text-2xl font-bold text-gray-900 mb-3">Vijayanagar Flagship Hub</h3>
+                <p className="text-gray-600 text-sm leading-relaxed">
+                  Centrally situated with convenient access to metro lines, quality hotels, serviced apartments, and direct road links to Kempegowda International Airport.
+                </p>
+              </div>
+              <div className="bg-slate-50 p-8 rounded-2xl border border-slate-200">
+                <MapPin className="w-8 h-8 text-blue-600 mb-4" />
+                <h3 className="text-2xl font-bold text-gray-900 mb-3">Nagadevanahalli Super Specialty Hub</h3>
+                <p className="text-gray-600 text-sm leading-relaxed">
+                  Located on the Outer Ring Road, featuring spacious diagnostic wings and peaceful post-operative recovery spaces.
+                </p>
+              </div>
+            </div>
+
+            <div className="bg-blue-50/80 p-8 rounded-2xl border border-blue-200">
+              <h3 className="text-xl font-bold text-gray-900 mb-4">Dedicated Hospitality for Somali Families</h3>
+              <div className="grid sm:grid-cols-2 gap-4 text-sm text-gray-700">
+                <div className="flex items-center gap-2">
+                  <CheckCircle className="w-4 h-4 text-blue-600 flex-shrink-0" />
+                  <span>Vetted serviced apartments with kitchens for self-prepared meals</span>
                 </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        <section className="py-16 px-4 bg-gradient-to-r from-slate-50 to-blue-50">
-          <div className="max-w-6xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-12 text-center">Our Bangalore Centers</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              <div className="bg-white p-8 rounded-lg shadow-md"><MapPin className="w-8 h-8 text-blue-600 mb-4" /><h3 className="text-2xl font-bold text-gray-900 mb-4">Vijayanagar</h3><p className="text-gray-700">Flagship super-specialty center with advanced infrastructure.</p></div>
-              <div className="bg-white p-8 rounded-lg shadow-md"><MapPin className="w-8 h-8 text-blue-600 mb-4" /><h3 className="text-2xl font-bold text-gray-900 mb-4">Nagadevanahalli</h3><p className="text-gray-700">Modern facility for comprehensive care and recovery.</p></div>
-            </div>
-          </div>
-        </section>
-
-        <section className="py-20 px-4 bg-gradient-to-r from-slate-900 via-blue-900 to-slate-900 text-white">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">Ready for Expert Eye Care?</h2>
-            <p className="text-lg text-blue-100 mb-8">Join Somali patients who received life-changing vision care.</p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-              <Button onClick={() => navigate('/contact-us')} size="lg" className="bg-blue-500 hover:bg-blue-600 text-white px-8">Get Free Medical Consultation</Button>
-              <Button onClick={() => navigate('/appointment-booking')} size="lg" className="bg-blue-600 hover:bg-blue-700 text-white px-8">Start Your Journey</Button>
-            </div>
-            <div className="bg-blue-800 p-8 rounded-lg mt-8">
-              <h3 className="text-2xl font-bold mb-6">Contact Information</h3>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <div><Phone className="w-8 h-8 mx-auto mb-3" /><p className="text-sm text-blue-100 mb-2">Call us</p><p className="font-semibold cursor-pointer hover:text-blue-100 transition" onClick={() => window.location.href = "tel:08026721818"}>08026721818</p></div>
-                <div><Mail className="w-8 h-8 mx-auto mb-3" /><p className="text-sm text-blue-100 mb-2">WhatsApp</p><p className="font-semibold cursor-pointer hover:text-blue-100 transition" onClick={() => window.location.href = "https://wa.me/919739302523"}>+91 9739302523</p></div>
-                <div><Mail className="w-8 h-8 mx-auto mb-3" /><p className="text-sm text-blue-100 mb-2">Email</p><p className="font-semibold cursor-pointer hover:text-blue-100 transition" onClick={() => copyToClipboard('care@vijayaeyeclinic.com')}>{copied ? "Copied!" : "care@vijayaeyeclinic.com"}</p></div>
+                <div className="flex items-center gap-2">
+                  <CheckCircle className="w-4 h-4 text-blue-600 flex-shrink-0" />
+                  <span>Airport pickup and dedicated local transport coordination</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <CheckCircle className="w-4 h-4 text-blue-600 flex-shrink-0" />
+                  <span>Transparent USD and INR billing with zero currency volatility</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <CheckCircle className="w-4 h-4 text-blue-600 flex-shrink-0" />
+                  <span>Direct post-operative tele-consultations upon returning home</span>
+                </div>
               </div>
             </div>
           </div>
         </section>
-        
 
-        <section className="py-20 px-4 bg-white">
+        {/* FAQ Section */}
+        <section className="py-20 px-4 bg-slate-50">
           <div className="container mx-auto max-w-3xl">
-            <motion.div
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              className="text-center mb-16"
-            >
-              <h2 className="text-4xl md:text-5xl font-bold mb-4 text-slate-900">
+            <div className="text-center mb-14">
+              <h2 className="text-3xl md:text-4xl font-bold mb-4 text-slate-900">
                 Frequently Asked Questions
               </h2>
-            </motion.div>
+              <p className="text-slate-600">
+                Essential travel and treatment details for Somali residents planning eye care in Bangalore.
+              </p>
+            </div>
 
             <div className="space-y-4">
               {faqs.map((faq, idx) => (
                 <motion.details
                   key={idx}
-                  initial={{ opacity: 0 }}
-                  whileInView={{ opacity: 1 }}
-                  className="group p-6 bg-slate-50 rounded-lg border border-slate-200 hover:border-blue-400 transition-all cursor-pointer"
+                  className="group p-6 bg-white rounded-2xl border border-slate-200 hover:border-blue-400 transition-all cursor-pointer shadow-sm"
                 >
                   <summary className="flex items-center justify-between font-bold text-slate-900 hover:text-blue-600 transition-colors">
-                    <span className="text-lg">{faq.q}</span>
-                    <ChevronRight className="w-6 h-6 group-open:rotate-90 transition-transform" />
+                    <span className="text-base md:text-lg">{faq.q}</span>
+                    <ChevronRight className="w-6 h-6 group-open:rotate-90 transition-transform flex-shrink-0" />
                   </summary>
-                  <p className="mt-4 text-slate-600">{faq.a}</p>
+                  <p className="mt-4 text-slate-600 leading-relaxed text-sm">
+                    {faq.a}
+                  </p>
                 </motion.details>
               ))}
             </div>
           </div>
         </section>
+
+        {/* CTA Banner */}
+        <section className="py-20 px-4 bg-gradient-to-r from-slate-900 via-blue-900 to-slate-900 text-white">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">
+              Connect with Our International Patient Desk
+            </h2>
+            <p className="text-lg text-blue-100 mb-8 max-w-2xl mx-auto">
+              Send your prescription and optical reports from Mogadishu, Hargeisa, or Garowe for an expert surgical evaluation, doctor recommendation, and transparent quote.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-10">
+              <Button
+                onClick={() => navigate('/contact-us')}
+                size="lg"
+                className="bg-blue-500 hover:bg-blue-600 text-white px-8 rounded-full font-semibold"
+              >
+                Book Virtual Consultation
+              </Button>
+              <Button
+                onClick={() => window.location.href = "https://wa.me/919739302523"}
+                size="lg"
+                className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 rounded-full font-semibold"
+              >
+                Direct WhatsApp Support (+91 9739302523)
+              </Button>
+            </div>
+
+            <div className="bg-blue-800/60 border border-blue-400/30 p-8 rounded-2xl">
+              <h3 className="text-xl font-bold mb-6">Somalia Patient Coordination Desk</h3>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div>
+                  <Phone className="w-7 h-7 mx-auto mb-2 text-blue-300" />
+                  <p className="text-xs text-blue-200 mb-1">Direct Hospital Line</p>
+                  <a href="tel:08026721818" className="font-semibold text-sm hover:underline">080 26721818</a>
+                </div>
+                <div>
+                  <Mail className="w-7 h-7 mx-auto mb-2 text-blue-300" />
+                  <p className="text-xs text-blue-200 mb-1">WhatsApp International Desk</p>
+                  <a href="https://wa.me/919739302523" className="font-semibold text-sm hover:underline">+91 9739302523</a>
+                </div>
+                <div>
+                  <Mail className="w-7 h-7 mx-auto mb-2 text-blue-300" />
+                  <p className="text-xs text-blue-200 mb-1">Send Reports & Scans</p>
+                  <p
+                    className="font-semibold text-sm cursor-pointer hover:underline"
+                    onClick={() => copyToClipboard('care@vijayaeyeclinic.com')}
+                  >
+                    {copied ? "Copied!" : "care@vijayaeyeclinic.com"}
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
       </div>
       <Footer />
     </>

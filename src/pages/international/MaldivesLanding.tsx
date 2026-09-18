@@ -1,189 +1,578 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
-import { Phone, Mail, MapPin, TrendingUp, Shield, Users, Award, ChevronRight } from "lucide-react";
+import {
+  Phone,
+  Mail,
+  MapPin,
+  TrendingUp,
+  Shield,
+  Users,
+  Award,
+  ChevronRight,
+  Plane,
+  Eye,
+  CheckCircle,
+  Activity,
+  Layers,
+  Sparkles,
+  Baby,
+  Smile,
+  Scissors
+} from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Helmet } from "react-helmet-async";
 
+const maldivesSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Hospital",
+      "@id": "https://vijayaeyeclinic.com/#hospital",
+      "name": "Vijaya Eye Clinic Super Specialty Eye Hospital",
+      "alternateName": [
+        "Best Eye Hospital in Bangalore for Maldivian Patients",
+        "Top Eye Hospital for Maldives Patients in India",
+        "Advanced eye surgery in india from male"
+      ],
+      "url": "https://vijayaeyeclinic.com/international/maldives",
+      "image": "https://vijayaeyeclinic.com/logo.png",
+      "telephone": "+91-9739302523",
+      "email": "care@vijayaeyeclinic.com",
+      "priceRange": "$$",
+      "description": "Vijaya Eye Clinic is a leading super specialty eye hospital in Bangalore, India providing advanced cataract surgery, LASIK, retina vitrectomy, cornea transplant, glaucoma treatment, pediatric ophthalmology, squint, and oculoplasty for international patients from the Maldives (Malé, Addu City, Fuvahmulah, Hulhumalé).",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "PV Plaza, #2, 5th Main Road, MC Layout, Opp. Sarvajna Bus Stop, Vijayanagar",
+        "addressLocality": "Bengaluru",
+        "addressRegion": "Karnataka",
+        "postalCode": "560040",
+        "addressCountry": "IN"
+      },
+      "areaServed": [
+        {
+          "@type": "Country",
+          "name": "Maldives"
+        },
+        {
+          "@type": "Country",
+          "name": "India"
+        }
+      ],
+      "availableLanguage": ["English", "Dhivehi Assistance", "Hindi"]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Why choose cataract surgery bangalore vijaya eye clinic for Maldivian patients?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Patients from Malé and Addu City choose Vijaya Eye Clinic for stitchless micro-incision phacoemulsification cataract surgery, premium toric and multifocal IOL implants from Alcon and Zeiss, and comprehensive international care delivering 60% to 75% cost savings compared to regional private healthcare."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How does Vijaya Eye Clinic assist with Indian Medical Visa paperwork in Malé?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Upon reviewing your optical scans and passport copies via WhatsApp or email, our international desk prepares an official hospital Medical Visa Invitation Letter within 24 hours for expedited processing with the High Commission of India in Malé."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How long after undergoing advanced cataract surgery can I fly back to the Maldives?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Our stitchless, micro-incision phacoemulsification allows rapid visual rehabilitation. Most Maldivian patients receive their formal fit-to-fly clearance certificate within 4 to 5 days."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Are serviced apartments with private kitchens available near the hospital?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, both our Vijayanagar and Nagadevanahalli centers are surrounded by vetted, comfortable serviced apartments equipped with private kitchens, allowing Maldivian families to prepare familiar meals during their recovery."
+          }
+        }
+      ]
+    }
+  ]
+};
+
 const MaldivesLanding = () => {
   const navigate = useNavigate();
   const [copied, setCopied] = useState(false);
 
-  const copyToClipboard = (text: string) => {
+  const copyToClipboard = (text) => {
     navigator.clipboard.writeText(text);
     setCopied(true);
     setTimeout(() => setCopied(false), 2000);
   };
 
   const advantages = [
-    { icon: TrendingUp, title: "Next-Gen Tech Infrastructure", desc: "High-end micro-incision surgeries, premium German/US IOL implants, blade-free laser suites, advanced diagnostics" },
-    { icon: Shield, title: "Exceptional Value & Quality", desc: "Premium equipment identical to top US/European clinics at optimized pricing" },
-    { icon: Users, title: "Dedicated Help Desk", desc: "Frictionless stay with access to dedicated international coordinators and customized hospitality" },
-    { icon: Award, title: "40+ Years Excellence", desc: "Complex, high-precision eye surgery expertise" },
+    {
+      icon: TrendingUp,
+      title: "Next-Gen Tech Infrastructure",
+      desc: "High-end micro-incision surgeries, premium German/US IOL implants, blade-free laser suites, and high-definition Spectral OCT."
+    },
+    {
+      icon: Shield,
+      title: "Exceptional Value & Quality",
+      desc: "US-FDA approved equipment identical to top Western clinics at 60% to 75% optimized pricing protected against currency fluctuations."
+    },
+    {
+      icon: Users,
+      title: "Dedicated Maldivian Help Desk",
+      desc: "End-to-end guidance including Malé embassy visa letters, Kempegowda Airport reception, local SIM cards, and serviced apartments with kitchens."
+    },
+    {
+      icon: Award,
+      title: "35+ Years Clinical Heritage",
+      desc: "Proven clinical excellence and trusted surgical outcomes across anterior and posterior eye segments led by senior eye surgeons."
+    },
   ];
 
-  const procedures = [
-    { title: "Premium Cataract Surgery", desc: "Advanced IOL options with stitchless micro-incision" },
-    { title: "Diabetic & Retinal Care", desc: "Laser therapy, anti-VEGF injections, advanced vitrectomy" },
-    { title: "Glaucoma Management", desc: "Precision diagnostics and treatments" },
-    { title: "LASIK & Custom Refractive", desc: "Blade-free technology for refractive errors" },
+  const treatmentSpecialities = [
+    {
+      icon: Eye,
+      title: "Cataract Surgery in Bangalore for Maldivian Patients",
+      desc: "Micro-Incision Cataract Surgery (MICS) with imported Toric, Multifocal, and Trifocal IOL implants from Alcon and Zeiss for total spectacle independence.",
+      tag: "Daycare | 15 Mins"
+    },
+    {
+      icon: Sparkles,
+      title: "LASIK Surgery in Bangalore for Maldivian Patients",
+      desc: "Blade-free Contoura Vision, Femto-LASIK, and EVO ICL phakic lens implants for permanent glasses removal with fast 24-hour visual recovery.",
+      tag: "Specs Removal"
+    },
+    {
+      icon: Activity,
+      title: "Retina Treatment in Bangalore for Maldivian Patients",
+      desc: "Comprehensive diabetic retinopathy management, anti-VEGF injections (Lucentis, Eylea), and 23G/25G sutureless vitrectomy for retinal detachment and macular hole.",
+      tag: "Retina Specialist"
+    },
+    {
+      icon: Layers,
+      title: "Glaucoma Treatment in Bangalore for Maldivian Patients",
+      desc: "Advanced optic nerve OCT screening, computerized visual field perimetry, Selective Laser Trabeculoplasty (SLT), and surgical trabeculectomy.",
+      tag: "Vision Protection"
+    },
+    {
+      icon: Shield,
+      title: "Cornea Treatment in Bangalore for Maldivian Patients",
+      desc: "Keratoconus C3R collagen cross-linking, emergency protocols for corneal ulcers, and authorized partial or full-thickness corneal transplant surgery.",
+      tag: "Cornea Specialist"
+    },
+    {
+      icon: Baby,
+      title: "Pediatric Ophthalmology in Bangalore for Maldivian Patients",
+      desc: "Gentle child eye exams, cycloplegic refraction, amblyopia lazy eye therapy, and pediatric cataract procedures in a warm environment.",
+      tag: "Child Eye Care"
+    },
+    {
+      icon: Smile,
+      title: "Squint Eye Treatment in Bangalore for Maldivian Patients",
+      desc: "Precision strabismus surgery for children and adults to realign visual axes, restore stereo 3D depth perception, and enhance facial balance.",
+      tag: "Strabismus Surgery"
+    },
+    {
+      icon: Scissors,
+      title: "Oculoplasty Treatment in Bangalore for Maldivian Patients",
+      desc: "Ptosis (drooping eyelid) correction, cosmetic blepharoplasty for loose eyelid skin removal, and DCR tear duct obstruction surgery.",
+      tag: "Eyelid & Orbit"
+    }
   ];
 
   const steps = [
-    { number: "01", title: "Digital Consultation", desc: "Share optical scans via WhatsApp/Email" },
-    { number: "02", title: "Medical Visa Invitation", desc: "Swift processing through Indian High Commission in Malé" },
-    { number: "03", title: "Airport Reception", desc: "Executive transit to accommodation or facility" },
-    { number: "04", title: "Treatment & Follow-up", desc: "Advanced care with discharge documentation" },
+    {
+      number: "01",
+      title: "Digital Consultation & Scan Review",
+      desc: "Share optical scans or prescription reports from Malé or Addu City via WhatsApp (+91 9739302523) for immediate preliminary evaluation and cost estimation."
+    },
+    {
+      number: "02",
+      title: "Medical Visa (V-Visa) Letter",
+      desc: "Fast-track Medical Visa Invitation Letter prepared within 24 hours for priority processing through the Indian High Commission in Malé."
+    },
+    {
+      number: "03",
+      title: "BLR Airport Transit & Accommodation",
+      desc: "Executive airport pickup from Bangalore International Airport (BLR) directly to verified partner serviced apartments with self-cooking kitchens."
+    },
+    {
+      number: "04",
+      title: "Daycare Surgery & Follow-up",
+      desc: "Undergo advanced daycare microsurgery, collect your fit-to-fly certificate in 4-5 days, and continue post-op virtual tele-consultations back home in the Maldives."
+    }
   ];
 
   const faqs = [
     {
       q: "How do I apply for an Indian Medical Visa from Malé?",
-      a: "Our international desk issues an official Medical Visa Invitation Letter for priority processing at the Indian High Commission in Malé."
+      a: "Our international desk issues an official hospital Medical Visa Invitation Letter within 24 hours for priority processing at the Indian High Commission in Malé once you share your optical scans and passport copies."
     },
     {
       q: "Can I get a preliminary diagnosis and pricing matrix before traveling?",
-      a: "Yes, absolutely. Share your ophthalmic prescriptions or diagnostic checkups via WhatsApp or Email for transparent cost estimate."
+      a: "Yes, absolutely. Share your ophthalmic prescriptions or diagnostic scans via WhatsApp or Email. Our senior specialists provide an itemized, transparent cost estimate for accurate budgeting."
     },
     {
       q: "What technology do you use for advanced vision correction?",
-      a: "State-of-the-art customized blade-free laser systems and premium Implantable Collamer Lens (ICL) technology for high refractive errors."
+      a: "We utilize state-of-the-art blade-free Contoura Vision laser systems and premium EVO Implantable Collamer Lens (ICL) technology for high refractive errors, providing rapid 24-hour visual recovery."
     },
     {
       q: "Are there local lodging options with private cooking setups?",
-      a: "Yes. We assist in booking premium serviced apartments near Vijayanagar and Nagadevanahalli with private kitchens."
+      a: "Yes. We assist in booking verified serviced apartments near our Vijayanagar and Nagadevanahalli centers featuring functional private kitchens, allowing Maldivian families to prepare familiar meals."
     },
     {
       q: "How long after undergoing advanced cataract surgery can I fly back to the Maldives?",
-      a: "Our stitchless, micro-incision phacoemulsification allows fast healing. Fit-to-fly certificate within 4-5 days."
+      a: "Our stitchless, micro-incision phacoemulsification allows fast healing. Most patients receive their formal fit-to-fly certification within 4 to 5 days after surgery."
     },
     {
       q: "What follow-up infrastructure is available once I return home?",
-      a: "Regular digital tele-health consults via Zoom or WhatsApp keeping you connected with your operating surgeon."
-    },
+      a: "We provide structured tele-health connectivity through scheduled virtual consultations via Zoom or WhatsApp, keeping you in direct contact with your operating surgeon."
+    }
   ];
 
   return (
     <>
       <Helmet>
         <title>Best Eye Hospital in Bangalore for Maldivian Patients | Vijaya Eye Clinic</title>
-        <meta name="description" content="Premium, high-precision eye care in Bangalore, India for patients from the Maldives. Specialized Cataract, LASIK, and Retinal services at Vijaya Eye Clinic. Get an immediate medical visa invite." />
-        <meta name="keywords" content="best eye hospital in bangalore for maldivian patients, advanced eye surgery in india from male, cataract surgery bangalore vijaya eye clinic, premium lasik cost india maldives" />
+        <meta
+          name="description"
+          content="Premium eye care in Bangalore, India for patients from the Maldives. Advanced eye surgery in india from male, cataract, LASIK, retina & cornea care at Vijaya Eye Clinic."
+        />
+        {/* Combined Keywords: Original + All 8 Core Procedures */}
+        <meta
+          name="keywords"
+          content="best eye hospital in bangalore for maldivian patients, advanced eye surgery in india from male, cataract surgery bangalore vijaya eye clinic, premium lasik cost india maldives, cataract surgery in bangalore for maldivian patients, lasik surgery in bangalore for maldivian patients, retina treatment in bangalore for maldivian patients, cornea treatment in bangalore for maldivian patients, glaucoma treatment in bangalore for maldivian patients, pediatric ophthalmology in bangalore for maldivian patients, squint eye treatment in bangalore for maldivian patients, oculoplasty treatment in bangalore for maldivian patients"
+        />
+
+        {/* Canonical Link */}
+        <link rel="canonical" href="https://vijayaeyeclinic.com/international/maldives" />
+
+        {/* 2-Way Cross-Referenced International Hreflangs */}
+        <link rel="alternate" hrefLang="en-MV" href="https://vijayaeyeclinic.com/international/maldives" />
+        <link rel="alternate" hrefLang="en-BH" href="https://vijayaeyeclinic.com/international/bahrain" />
+        <link rel="alternate" hrefLang="en-BD" href="https://vijayaeyeclinic.com/international/bangladesh" />
+        <link rel="alternate" hrefLang="en-BW" href="https://vijayaeyeclinic.com/international/botswana" />
+        <link rel="alternate" hrefLang="en-KH" href="https://vijayaeyeclinic.com/international/cambodia" />
+        <link rel="alternate" hrefLang="en-ET" href="https://vijayaeyeclinic.com/international/ethiopia" />
+        <link rel="alternate" hrefLang="en-GH" href="https://vijayaeyeclinic.com/international/ghana" />
+        <link rel="alternate" hrefLang="en-ID" href="https://vijayaeyeclinic.com/international/indonesia" />
+        <link rel="alternate" hrefLang="en-IQ" href="https://vijayaeyeclinic.com/international/iraq" />
+        <link rel="alternate" hrefLang="en-KE" href="https://vijayaeyeclinic.com/international/kenya" />
+        <link rel="alternate" hrefLang="en-KW" href="https://vijayaeyeclinic.com/international/kuwait" />
+        <link rel="alternate" hrefLang="en-LA" href="https://vijayaeyeclinic.com/international/laos" />
+        <link rel="alternate" hrefLang="en-MW" href="https://vijayaeyeclinic.com/international/malawi" />
+        <link rel="alternate" hrefLang="x-default" href="https://vijayaeyeclinic.com/international/bahrain" />
+
+        {/* Structured Hospital & FAQ Schema */}
+        <script type="application/ld+json">
+          {JSON.stringify(maldivesSchema)}
+        </script>
       </Helmet>
 
       <Header />
       <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
-        <section className="relative min-h-[600px] flex items-center justify-center bg-gradient-to-r from-slate-900 via-blue-900 to-slate-900 text-white px-4 py-20">
+
+        {/* Hero Section */}
+        <section className="relative min-h-[640px] flex items-center justify-center bg-gradient-to-r from-slate-900 via-blue-900 to-slate-900 text-white px-4 py-20">
           <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">Advanced, Premium Eye Care for Patients from the Maldives</h1>
-            <p className="text-lg md:text-xl text-blue-100 mb-8">From Malé, Addu City, Fuvahmulah seeking elite-level vision restoration</p>
+            <span className="inline-flex items-center gap-2 bg-blue-500/20 text-blue-300 text-sm font-semibold px-4 py-1.5 rounded-full mb-6 border border-blue-400/30">
+              <Plane className="w-4 h-4" /> Maldives to Bangalore Medical Care Concierge
+            </span>
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
+              Best Eye Hospital in Bangalore for Maldivian Patients
+            </h1>
+            <p className="text-lg md:text-xl text-blue-100 mb-8 max-w-3xl mx-auto leading-relaxed">
+              Seeking advanced eye surgery in india from male, Addu City, or Fuvahmulah? Vijaya Eye Clinic provides world-class surgical care, blade-free LASIK, and vitreoretinal treatments with comprehensive visa assistance.
+            </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button onClick={() => navigate('/contact-us')} size="lg" className="bg-blue-500 hover:bg-blue-600 text-white px-8">Get Free Medical Consultation</Button>
-              <Button onClick={() => window.location.href = "tel:08026721818"} size="lg" variant="outline" className="text-black border-black hover:bg-black hover:text-white px-8"><Phone className="w-4 h-4 mr-2" />Call Our Team</Button>
+              <Button
+                onClick={() => navigate('/contact-us')}
+                size="lg"
+                className="bg-blue-500 hover:bg-blue-600 text-white px-8 rounded-full font-semibold shadow-lg"
+              >
+                Get Free Medical Consultation & Quote
+              </Button>
+              <Button
+                onClick={() => window.location.href = "https://wa.me/919739302523"}
+                size="lg"
+                variant="outline"
+                className="text-white border-white/50 bg-white/10 hover:bg-white hover:text-slate-900 px-8 rounded-full font-semibold"
+              >
+                WhatsApp Desk (+91 9739302523)
+              </Button>
             </div>
           </div>
         </section>
 
-        <section className="py-16 px-4 bg-white">
-          <div className="max-w-4xl mx-auto">
-            <p className="text-lg text-gray-700 mb-4">Every year, many families from Malé, Addu City, Fuvahmulah, and across the Maldives choose Bangalore for definitive, elite-level vision restoration.</p>
-            <p className="text-lg text-gray-700">At <strong>Vijaya Eye Clinic</strong>, we bring over 40 years of trusted clinical excellence across two state-of-the-art super-specialty facilities in Bangalore: our central flagship hub in <strong>Vijayanagar</strong> and our ultra-modern center in <strong>Nagadevanahalli</strong>.</p>
+        {/* Overview Bar */}
+        <section className="py-14 px-4 bg-white border-b border-slate-100">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
+              Advanced Clinical Care with Complete Travel Support
+            </h2>
+            <p className="text-gray-700 leading-relaxed text-base md:text-lg">
+              Every year, families from the Maldives choose <strong>Vijaya Eye Clinic</strong> across our state-of-the-art super specialty facilities in <strong>Vijayanagar</strong> and <strong>Nagadevanahalli</strong>, Bangalore. With over 35 years of clinical trust, we deliver the same US-FDA approved technologies used in leading Western centers at predictable, cost-effective pricing.
+            </p>
           </div>
         </section>
 
-        <section className="py-16 px-4">
+        {/* Specialized Treatments Section (All 8 Core Specialities) */}
+        <section className="py-20 px-4 bg-slate-50">
           <div className="max-w-6xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-12 text-center">Why Patients from the Maldives Choose Vijaya Eye Clinic, Bangalore</h2>
+            <div className="text-center mb-16">
+              <span className="text-blue-600 font-semibold uppercase tracking-wider text-sm">
+                Super Specialty Procedures
+              </span>
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mt-2">
+                Advanced Eye Treatments for Maldivian Patients
+              </h2>
+              <p className="text-gray-600 mt-3 max-w-2xl mx-auto">
+                Comprehensive ophthalmic surgical solutions tailored to international recovery timelines.
+              </p>
+            </div>
+
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {advantages.map((adv, idx) => (
-                <motion.div key={idx} initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} className="bg-white p-8 rounded-lg shadow-md">
-                  <adv.icon className="w-12 h-12 text-blue-600 mb-4" />
-                  <h3 className="text-xl font-semibold text-gray-900 mb-3">{adv.title}</h3>
-                  <p className="text-gray-600">{adv.desc}</p>
+              {treatmentSpecialities.map((item, idx) => (
+                <motion.div
+                  key={idx}
+                  className="bg-white rounded-2xl p-7 shadow-sm border border-slate-200/80 hover:shadow-md hover:border-blue-300 transition-all flex flex-col justify-between"
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: idx * 0.05 }}
+                >
+                  <div>
+                    <div className="flex items-center justify-between mb-4">
+                      <div className="w-12 h-12 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center">
+                        <item.icon className="w-6 h-6" />
+                      </div>
+                      <span className="text-xs font-semibold px-3 py-1 bg-slate-100 text-slate-700 rounded-full">
+                        {item.tag}
+                      </span>
+                    </div>
+                    <h3 className="text-xl font-bold text-gray-900 mb-3">
+                      {item.title}
+                    </h3>
+                    <p className="text-gray-600 text-sm leading-relaxed mb-4">
+                      {item.desc}
+                    </p>
+                  </div>
+                  <div
+                    className="pt-2 border-t border-slate-100 flex items-center text-blue-600 text-sm font-semibold gap-1 cursor-pointer hover:underline"
+                    onClick={() => navigate('/contact-us')}
+                  >
+                    Inquire for Treatment Plan <ChevronRight className="w-4 h-4" />
+                  </div>
                 </motion.div>
               ))}
             </div>
           </div>
         </section>
 
-        <section className="py-16 px-4 bg-gradient-to-r from-slate-50 to-blue-50">
+        {/* Why Patients from the Maldives Choose Us */}
+        <section className="py-20 px-4 bg-white">
           <div className="max-w-6xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-12 text-center">Specialized Eye Treatments</h2>
+            <div className="text-center mb-16">
+              <span className="text-blue-600 font-semibold uppercase tracking-wider text-sm">
+                Patient Benefits
+              </span>
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mt-2">
+                Why Patients from the Maldives Choose Vijaya Eye Clinic
+              </h2>
+            </div>
+
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {procedures.map((proc, idx) => (
-                <div key={idx} className="bg-white p-8 rounded-lg shadow-md border-l-4 border-blue-500">
-                  <h3 className="text-xl font-semibold text-gray-900 mb-3">{proc.title}</h3>
-                  <p className="text-gray-600">{proc.desc}</p>
+              {advantages.map((adv, idx) => (
+                <motion.div
+                  key={idx}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  className="bg-slate-50 p-8 rounded-2xl border border-slate-200"
+                >
+                  <adv.icon className="w-12 h-12 text-blue-600 mb-4" />
+                  <h3 className="text-xl font-bold text-gray-900 mb-3">{adv.title}</h3>
+                  <p className="text-gray-600 leading-relaxed text-sm">{adv.desc}</p>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Travel & Treatment Steps */}
+        <section className="py-20 px-4 bg-gradient-to-r from-slate-50 to-blue-50">
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-16">
+              <span className="text-blue-600 font-semibold uppercase tracking-wider text-sm">
+                Smooth Logistics
+              </span>
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mt-2">
+                Your Journey from the Maldives to Bangalore
+              </h2>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+              {steps.map((step, idx) => (
+                <div
+                  key={idx}
+                  className="bg-white p-7 rounded-2xl shadow-sm relative border border-slate-200 flex flex-col justify-between"
+                >
+                  <div>
+                    <div className="text-4xl font-extrabold text-blue-200 mb-4 font-mono">
+                      {step.number}
+                    </div>
+                    <h3 className="text-lg font-bold text-gray-900 mb-3">
+                      {step.title}
+                    </h3>
+                    <p className="text-gray-600 text-xs leading-relaxed">
+                      {step.desc}
+                    </p>
+                  </div>
                 </div>
               ))}
             </div>
           </div>
         </section>
 
+        {/* Bangalore Centers & Hospitality */}
         <section className="py-16 px-4 bg-white">
           <div className="max-w-6xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-12 text-center">Your Journey from the Maldives to Vijaya Eye Clinic</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {steps.map((step, idx) => (
-                <div key={idx} className="bg-gradient-to-br from-slate-50 to-blue-50 p-8 rounded-lg shadow-md relative">
-                  <div className="absolute top-4 right-4 text-5xl font-bold text-blue-100">{step.number}</div>
-                  <h3 className="text-xl font-semibold text-gray-900 mb-3">{step.title}</h3>
-                  <p className="text-gray-600">{step.desc}</p>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-12 text-center">
+              Our Bangalore Facilities & Extended Stay Support
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+              <div className="bg-slate-50 p-8 rounded-2xl border border-slate-200">
+                <MapPin className="w-8 h-8 text-blue-600 mb-4" />
+                <h3 className="text-2xl font-bold text-gray-900 mb-3">Vijayanagar Flagship Hub</h3>
+                <p className="text-gray-600 text-sm leading-relaxed">
+                  Centrally situated with convenient access to metro lines, quality hotels, serviced apartments, and direct road links to Kempegowda International Airport.
+                </p>
+              </div>
+              <div className="bg-slate-50 p-8 rounded-2xl border border-slate-200">
+                <MapPin className="w-8 h-8 text-blue-600 mb-4" />
+                <h3 className="text-2xl font-bold text-gray-900 mb-3">Nagadevanahalli Super Specialty Hub</h3>
+                <p className="text-gray-600 text-sm leading-relaxed">
+                  Located on the Outer Ring Road, featuring spacious diagnostic wings and peaceful post-operative recovery spaces.
+                </p>
+              </div>
+            </div>
+
+            <div className="bg-blue-50/80 p-8 rounded-2xl border border-blue-200">
+              <h3 className="text-xl font-bold text-gray-900 mb-4">Dedicated Hospitality for Maldivian Families</h3>
+              <div className="grid sm:grid-cols-2 gap-4 text-sm text-gray-700">
+                <div className="flex items-center gap-2">
+                  <CheckCircle className="w-4 h-4 text-blue-600 flex-shrink-0" />
+                  <span>Vetted serviced apartments with kitchens for self-prepared meals</span>
                 </div>
-              ))}
+                <div className="flex items-center gap-2">
+                  <CheckCircle className="w-4 h-4 text-blue-600 flex-shrink-0" />
+                  <span>Airport pickup and dedicated local transport coordination</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <CheckCircle className="w-4 h-4 text-blue-600 flex-shrink-0" />
+                  <span>Transparent USD and INR billing with zero currency volatility</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <CheckCircle className="w-4 h-4 text-blue-600 flex-shrink-0" />
+                  <span>Direct post-operative tele-consultations upon returning home</span>
+                </div>
+              </div>
             </div>
           </div>
         </section>
 
-        <section className="py-16 px-4 bg-gradient-to-r from-slate-50 to-blue-50">
-          <div className="max-w-6xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-12 text-center">Our Bangalore Centers</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              <div className="bg-white p-8 rounded-lg shadow-md"><MapPin className="w-8 h-8 text-blue-600 mb-4" /><h3 className="text-2xl font-bold text-gray-900 mb-4">Vijayanagar</h3><p className="text-gray-700">Central flagship hub.</p></div>
-              <div className="bg-white p-8 rounded-lg shadow-md"><MapPin className="w-8 h-8 text-blue-600 mb-4" /><h3 className="text-2xl font-bold text-gray-900 mb-4">Nagadevanahalli</h3><p className="text-gray-700">Ultra-modern center.</p></div>
-            </div>
-          </div>
-        </section>
-
-        <section className="py-20 px-4 bg-white">
+        {/* FAQ Section */}
+        <section className="py-20 px-4 bg-slate-50">
           <div className="container mx-auto max-w-3xl">
-            <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold mb-4 text-slate-900">Frequently Asked Questions</h2>
-            </motion.div>
+            <div className="text-center mb-14">
+              <h2 className="text-3xl md:text-4xl font-bold mb-4 text-slate-900">
+                Frequently Asked Questions
+              </h2>
+              <p className="text-slate-600">
+                Essential travel and treatment details for Maldivian residents planning eye care in Bangalore.
+              </p>
+            </div>
+
             <div className="space-y-4">
               {faqs.map((faq, idx) => (
-                <motion.details key={idx} initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} className="group p-6 bg-slate-50 rounded-lg border border-slate-200 hover:border-blue-400 transition-all cursor-pointer">
+                <motion.details
+                  key={idx}
+                  className="group p-6 bg-white rounded-2xl border border-slate-200 hover:border-blue-400 transition-all cursor-pointer shadow-sm"
+                >
                   <summary className="flex items-center justify-between font-bold text-slate-900 hover:text-blue-600 transition-colors">
-                    <span className="text-lg">{faq.q}</span>
-                    <ChevronRight className="w-6 h-6 group-open:rotate-90 transition-transform" />
+                    <span className="text-base md:text-lg">{faq.q}</span>
+                    <ChevronRight className="w-6 h-6 group-open:rotate-90 transition-transform flex-shrink-0" />
                   </summary>
-                  <p className="mt-4 text-slate-600">{faq.a}</p>
+                  <p className="mt-4 text-slate-600 leading-relaxed text-sm">
+                    {faq.a}
+                  </p>
                 </motion.details>
               ))}
             </div>
           </div>
         </section>
 
+        {/* CTA Banner */}
         <section className="py-20 px-4 bg-gradient-to-r from-slate-900 via-blue-900 to-slate-900 text-white">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">Ready for Premium Eye Care?</h2>
-            <p className="text-lg text-blue-100 mb-8">Join Maldivian patients for world-class vision restoration.</p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-              <Button onClick={() => navigate('/contact-us')} size="lg" className="bg-blue-500 hover:bg-blue-600 text-white px-8">Get Free Medical Consultation</Button>
-              <Button onClick={() => navigate('/appointment-booking')} size="lg" className="bg-blue-600 hover:bg-blue-700 text-white px-8">Start Your Journey</Button>
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">
+              Connect with Our International Patient Desk
+            </h2>
+            <p className="text-lg text-blue-100 mb-8 max-w-2xl mx-auto">
+              Send your prescription and optical reports from Malé, Addu City, or Fuvahmulah for an expert surgical evaluation, doctor recommendation, and transparent quote.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-10">
+              <Button
+                onClick={() => navigate('/contact-us')}
+                size="lg"
+                className="bg-blue-500 hover:bg-blue-600 text-white px-8 rounded-full font-semibold"
+              >
+                Book Virtual Consultation
+              </Button>
+              <Button
+                onClick={() => window.location.href = "https://wa.me/919739302523"}
+                size="lg"
+                className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 rounded-full font-semibold"
+              >
+                Direct WhatsApp Support (+91 9739302523)
+              </Button>
             </div>
-            <div className="bg-blue-800 p-8 rounded-lg mt-8">
-              <h3 className="text-2xl font-bold mb-6">Contact Information</h3>
+
+            <div className="bg-blue-800/60 border border-blue-400/30 p-8 rounded-2xl">
+              <h3 className="text-xl font-bold mb-6">Maldives Patient Coordination Desk</h3>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <div><Phone className="w-8 h-8 mx-auto mb-3" /><p className="text-sm text-blue-100 mb-2">Call us</p><p className="font-semibold cursor-pointer hover:text-blue-100 transition" onClick={() => window.location.href = "tel:08026721818"}>08026721818</p></div>
-                <div><Mail className="w-8 h-8 mx-auto mb-3" /><p className="text-sm text-blue-100 mb-2">WhatsApp</p><p className="font-semibold cursor-pointer hover:text-blue-100 transition" onClick={() => window.location.href = "https://wa.me/919739302523"}>+91 9739302523</p></div>
-                <div><Mail className="w-8 h-8 mx-auto mb-3" /><p className="text-sm text-blue-100 mb-2">Email</p><p className="font-semibold cursor-pointer hover:text-blue-100 transition" onClick={() => copyToClipboard('care@vijayaeyeclinic.com')}>{copied ? "Copied!" : "care@vijayaeyeclinic.com"}</p></div>
+                <div>
+                  <Phone className="w-7 h-7 mx-auto mb-2 text-blue-300" />
+                  <p className="text-xs text-blue-200 mb-1">Direct Hospital Line</p>
+                  <a href="tel:08026721818" className="font-semibold text-sm hover:underline">080 26721818</a>
+                </div>
+                <div>
+                  <Mail className="w-7 h-7 mx-auto mb-2 text-blue-300" />
+                  <p className="text-xs text-blue-200 mb-1">WhatsApp International Desk</p>
+                  <a href="https://wa.me/919739302523" className="font-semibold text-sm hover:underline">+91 9739302523</a>
+                </div>
+                <div>
+                  <Mail className="w-7 h-7 mx-auto mb-2 text-blue-300" />
+                  <p className="text-xs text-blue-200 mb-1">Send Reports & Scans</p>
+                  <p
+                    className="font-semibold text-sm cursor-pointer hover:underline"
+                    onClick={() => copyToClipboard('care@vijayaeyeclinic.com')}
+                  >
+                    {copied ? "Copied!" : "care@vijayaeyeclinic.com"}
+                  </p>
+                </div>
               </div>
             </div>
           </div>
         </section>
+
       </div>
       <Footer />
     </>

@@ -1,1 +1,49 @@
+# Specialities & Treatments
+/eye-care-specialities/comprehensive-ophthalmology/*   /specialities/comprehensive-ophthalmology   301!
+/eye-care-specialities/cataract-treatment/*           /specialities/cataract-treatment            301!
+/eye-care-specialities/glaucoma-treatment/*           /specialities/glaucoma-treatment            301!
+/eye-care-specialities/diabetic-eye-care/*            /specialities/diabetic-eye-care             301!
+/eye-care-specialities/oculoplasty-treatment/*        /specialities/oculoplasty-treatment         301!
+/eye-care-specialities/retina-treatment/*             /specialities/retina-treatment              301!
+/eye-care-specialities/vitrectomy-surgery/*           /specialities/vitrectomy-surgery            301!
+/eye-care-specialities/optometry/*                    /specialities/optometry                     301!
+/eye-care-specialities/*                              /specialities                               301!
+/refractive-surgeries/lasik-vs-smile/*                /specialities/lasik-refractive-treatment    301!
+/refractive-surgeries/lasik-vs-*                      /specialities/lasik-refractive-treatment    301!
+/retina/laser-retina-treatments/*                     /specialities/retina-treatment              301!
+
+# Facilities & Branches
+/facilities/vijaya-eye-clinic-at-nagdevanahalli/*     /facilities/nagadevanahalli                 301!
+/facilities/opticals-by-neha-opticals/*               /facilities/opticals-by-neha                301!
+/facilities/*                                         /facilities/nagadevanahalli                 301!
+
+# About Us & Info
+/about-us/our-team/*                                  /our-team                                   301!
+/about-us/vision-and-mission/*                        /vision-mission                             301!
+/about-us/core-values-and-quality/*                   /core-values                                301!
+/careers/para-medical/*                               /careers                                    301!
+
+# Appointments & Bookings
+/book-appointment/*                                   /appointment-booking                        301!
+/my-bookings/*                                        /appointment-booking                        301!
+/appointment-reschedule/*                             /appointment-booking                        301!
+/appointment-cancellation-confirmation/*              /appointment-booking                        301!
+/cancel-payment/*                                      /appointment-booking                        301!
+/pricing-plan/*                                       /appointment-booking                        301!
+
+# Blog Posts & Categories
+/eye-care/experience-the-future-of-eye-care-in-bangalore/*   /blog                                301!
+/eye-care/get-rid-of-glasses-bangalore/*               /specialities/lasik-refractive-treatment   301!
+/eye-care/unlocking-clarity-navigating-glaucoma-treatment-with-vijaya-eye-clinic/* /specialities/glaucoma-treatment 301!
+/eye-care/unveiling-the-secrets-of-radiant-eyes-a-holistic-guide-to-superb-eye-care/* /blog       301!
+/eye-care/5-tips-for-parents-with-myopic-children/*   /specialities/myopia-treatment              301!
+/eye-care/7-eye-complications-caused-by-diabetes/*    /specialities/diabetic-eye-care             301!
+/comprehensive-eye-examination/free-eye-tests-for-senior-citizens/* /blog                         301!
+/category/corena/*                                    /specialities/cornea-treatment              301!
+/category/retina/*                                    /specialities/retina-treatment              301!
+/category/refractive-surgeries/*                      /specialities/lasik-refractive-treatment    301!
+/category/comprehensive-eye-examination/*             /specialities/comprehensive-ophthalmology   301!
+/feed/*                                               /blog                                       301!
+
+# React SPA Fallback (Always Last)
 /* /index.html 200
